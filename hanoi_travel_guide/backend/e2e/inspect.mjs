@@ -1,0 +1,15 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+page.on('pageerror', e => console.log('PAGE ERROR', e.message));
+page.on('console', e => console.log('CONSOLE', e.type(), e.text()));
+page.on('requestfailed', r => console.log('REQUEST FAILED', r.url(), r.failure()?.errorText));
+await page.goto('http://localhost:8090');
+await page.locator('canvas').first().waitFor({ state: 'attached', timeout: 20000 }).catch(() => {});
+console.log('BODY', (await page.locator('body').innerHTML()).slice(0, 8000));
+const semantics = page.locator('flt-semantics-placeholder');
+if (await semantics.count()) await semantics.evaluate(element => element.click());
+await page.getByText('Welcome to Hanoi.', { exact: true }).waitFor({ timeout: 10000 }).catch(() => {});
+await page.screenshot({ path: '../.local/web-desktop.png' });
+console.log((await page.locator('body').ariaSnapshot()).slice(0, 12000));
+await browser.close();
