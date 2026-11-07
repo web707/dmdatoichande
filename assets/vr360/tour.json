@@ -1,0 +1,949 @@
+{
+  "title": "Đình Định Công Thượng & Đền thờ Tổ nghề Kim hoàn",
+  "entrySceneId": "scene-14",
+  "mapRoutes": [
+    {
+      "from": "scene-1",
+      "to": "scene-2"
+    },
+    {
+      "from": "scene-1",
+      "to": "scene-14"
+    },
+    {
+      "from": "scene-1",
+      "to": "scene-15"
+    },
+    {
+      "from": "scene-2",
+      "to": "scene-3"
+    },
+    {
+      "from": "scene-2",
+      "to": "scene-4"
+    },
+    {
+      "from": "scene-2",
+      "to": "scene-5"
+    },
+    {
+      "from": "scene-2",
+      "to": "scene-14"
+    },
+    {
+      "from": "scene-2",
+      "to": "scene-15"
+    },
+    {
+      "from": "scene-3",
+      "to": "scene-7"
+    },
+    {
+      "from": "scene-4",
+      "to": "scene-5"
+    },
+    {
+      "from": "scene-5",
+      "to": "scene-6"
+    },
+    {
+      "from": "scene-5",
+      "to": "scene-9"
+    },
+    {
+      "from": "scene-5",
+      "to": "scene-13"
+    },
+    {
+      "from": "scene-6",
+      "to": "scene-7"
+    },
+    {
+      "from": "scene-7",
+      "to": "scene-8"
+    },
+    {
+      "from": "scene-9",
+      "to": "scene-10"
+    },
+    {
+      "from": "scene-10",
+      "to": "scene-11"
+    },
+    {
+      "from": "scene-11",
+      "to": "scene-12"
+    },
+    {
+      "from": "scene-11",
+      "to": "scene-13"
+    },
+    {
+      "from": "scene-14",
+      "to": "scene-15"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-1",
+      "title": "Cổng đình",
+      "titleEn": "Communal house gate",
+      "image": "panoramas/01.webp",
+      "yaw": -87.5,
+      "pitch": 0,
+      "position": {
+        "x": 49,
+        "y": 82
+      },
+      "links": [
+        {
+          "targetId": "scene-2",
+          "yaw": -86,
+          "pitch": -15.8,
+          "nextYaw": -86.6
+        },
+        {
+          "targetId": "scene-14",
+          "yaw": -88.4,
+          "pitch": 30,
+          "nextYaw": -87
+        },
+        {
+          "targetId": "scene-15",
+          "yaw": -75,
+          "pitch": 30
+        }
+      ],
+      "markers": [
+        {
+          "id": "cong-dinh",
+          "yaw": -108,
+          "pitch": 0,
+          "title": "Cổng đình Định Công Thượng",
+          "titleEn": "The Main Gate of Dinh Cong Thuong Communal House",
+          "content": [
+            "Cổng đình là lối vào chính dẫn bách gia trăm họ vào không gian linh thiêng của di tích. Công trình được xây dựng theo phong cách nghi môn truyền thống dưới dạng các cột trụ biểu cao vút gồm 4 trụ bằng gạch vữa kiên cố. Hai trụ lớn ở giữa có đỉnh chạm hình bốn chim phượng múa đuôi kết dải lá lật, hai trụ nhỏ hai bên có đỉnh đắp đôi nghê chầu uy nghiêm nhằm soi xét tâm linh, trấn trạch trừ tà trước khi bước vào nơi điện thờ.",
+            "Trải qua bao thăng trầm thời gian và các đợt trùng tu lớn dưới thời nhà Nguyễn vào thế kỷ 19, cổng đình không chỉ là hạng mục kiến trúc khởi đầu mà còn đóng vai trò là ranh giới chuyển tiếp từ không gian đời thường vào chốn thâm nghiêm, tách biệt sự ồn ào của phố thị hiện đại để đưa du khách bước vào khuôn viên thanh tịnh, trầm mặc của một di tích cổ."
+          ],
+          "contentEn": [
+            "The main gate serves as the primary entrance leading worshippers into the sacred realm of the relic. Built in the traditional Nghi Mon architectural style, it features four soaring brick-and-mortar pillar columns. The two larger central pillars are crowned with four phoenixes displaying their tails in leaf patterns, while the two smaller flanking pillars are topped with a pair of majestic Qilins keeping watch to purify the minds of pilgrims before they enter the sanctuary.",
+            "Having endured the vicissitudes of time and major restorations during the Nguyen Dynasty in the 19th century, the gate is not merely an architectural entrance but a spiritual boundary. It gracefully separates the bustling modern urban environment from the tranquil, venerable atmosphere of an ancient sacred site."
+          ]
+        },
+        {
+          "id": "tong-quan-cum-di-tich",
+          "yaw": -143,
+          "pitch": -15,
+          "title": "Tổng quan cụm di tích",
+          "titleEn": "Overview of the Historical and Architectural Complex of Dinh Cong Thuong Communal House and Goldsmith Ancestors Temple",
+          "content": [
+            "Đình Định Công Thượng và Đền thờ ba vị Tổ nghề Kim hoàn tọa lạc tại làng cổ Định Công Thượng (nay thuộc phường Định Công, Hà Nội) là cụm di tích Lịch sử - Kiến trúc nghệ thuật đặc sắc tồn tại lâu đời. Quần thể di tích được xây dựng trên khu gò đất cổ rộng rãi, chếch hướng Tây Nam. Sự kết hợp độc đáo \"Đình bên trái, Đền bên phải\" đã tạo nên một không gian tâm linh khép kín, gắn bó khăng khít trên tất cả mọi phương diện và cả đời sống của nhân dân.",
+            "Về phụng thờ, Đình thờ hai vị Thành hoàng làng là Chàng Công Sơ thời Hùng Vương thứ 17 và Thần Đoàn Thượng thời Lý. Đền thờ ba anh em họ Trần từ thế kỷ VI thời Lý Nam Đế, những người truyền dạy nghề kim hoàn, đặt nền móng cho làng nghề Định Công và phố Hàng Bạc Thăng Long.",
+            "Về giá trị văn hóa và kiến trúc, di tích lưu giữ nét kiến trúc đặc trưng thời Lê Trung Hưng và thời Nguyễn. Nơi đây là kho tàng di sản vô giá với hệ thống chạm khắc gỗ, hoành phi, câu đối, cửa võng thếp vàng và đồ thờ cổ, thể hiện tinh hoa nghệ thuật cùng đạo lý \"Uống nước nhớ nguồn\"."
+          ],
+          "contentEn": [
+            "Dinh Cong Thuong Communal House and the Temple dedicated to the Three Goldsmith Ancestors are located in the ancient village of Dinh Cong Thuong (now Dinh Cong Ward, Hanoi), forming a unique historical and artistic architectural complex that has endured for centuries. Built on a spacious ancient mound facing Southwest, the unique layout of \"Communal House on the left, Temple on the right\" creates a harmonious spiritual sanctuary deeply interwoven with every aspect of local life.",
+            "Regarding worship, the Communal House honors two Tutelary Deities: Chang Cong So from the 17th Hung King era and Deity Doan Thuong of the Ly Dynasty. The Temple honors the three Tran brothers from the 6th-century Ly Nam De reign, who taught goldsmithing, establishing Dinh Cong craft village and Thang Long's historic Hang Bac street.",
+            "Regarding cultural and architectural value, the complex preserves signature Restored Le and Nguyen Dynasty styles. It serves as an invaluable heritage site featuring delicate woodcarvings, gilded boards, couplets, decorative canopies, and ancient ritual items, reflecting artistic mastery and the tradition of gratitude."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum0.mp3",
+        "vi": "vi/cum0.mp3"
+      }
+    },
+    {
+      "id": "scene-2",
+      "title": "Sân trước hai ao",
+      "titleEn": "Courtyard by the ponds",
+      "image": "panoramas/02.webp",
+      "yaw": -91.2,
+      "pitch": -16.3,
+      "position": {
+        "x": 50,
+        "y": 66
+      },
+      "links": [
+        {
+          "targetId": "scene-1",
+          "yaw": 93.4,
+          "pitch": -10.2,
+          "nextYaw": -87.5
+        },
+        {
+          "targetId": "scene-3",
+          "yaw": -131.4,
+          "pitch": -26.2,
+          "nextYaw": -86.4
+        },
+        {
+          "targetId": "scene-4",
+          "yaw": -47.6,
+          "pitch": -17.7,
+          "nextYaw": -37.9
+        },
+        {
+          "targetId": "scene-5",
+          "yaw": -82.8,
+          "pitch": -17.4,
+          "nextYaw": -88.5
+        },
+        {
+          "targetId": "scene-14",
+          "yaw": 99,
+          "pitch": 17
+        },
+        {
+          "targetId": "scene-15",
+          "yaw": 88,
+          "pitch": 17
+        }
+      ],
+      "markers": [
+        {
+          "id": "ao-dinh",
+          "yaw": 179,
+          "pitch": -8,
+          "title": "Ao Đình",
+          "titleEn": "The Communal House Feng Shui Pond",
+          "content": [
+            "Hiện diện bên góc trái trước khoảng sân di tích là chiếc ao Đình lung linh bóng nước. Nhìn theo phong thủy cổ truyền trong tổng thể \"Long chầu hổ phục\", chiếc ao đóng vai trò như điểm tụ thủy tự nhiên giúp tích tụ những điều may mắn, bảo vệ sự bình an và đem lại sự phát đạt cho cả cộng đồng dân làng. Không chỉ mang ý nghĩa che chở cho khu di tích, ao Đình còn góp phần làm mát không gian, mang đến vẻ đẹp sơn thủy hữu tình và nét thanh bình đặc trưng cho ngôi đình."
+          ],
+          "contentEn": [
+            "Positioned at the front-left side of the courtyard, the ancient Communal House pond reflects the timeless beauty of the complex. According to traditional feng shui principles based on the \"Dragons and Tigers bowing\" layout, the pond functions as a natural water reservoir that gathers blessings, safeguards peace, and promotes collective prosperity for the village. Beyond its protective symbolism, the pond helps refresh the surrounding air, bestowing a picturesque and serene ambiance upon the entire heritage site."
+          ]
+        },
+        {
+          "id": "ao-den",
+          "yaw": 358,
+          "pitch": -8,
+          "title": "Ao Đền",
+          "titleEn": "The Temple Feng Shui Pond",
+          "content": [
+            "Tọa lạc tại góc phải phía trước sân di tích là ao Đền cổ kính, mang đậm dấu ấn kiến trúc truyền thống. Dưới góc nhìn phong thủy với thế đất \"Long chầu hổ phục\", lòng ao đóng vai trò là nơi tích tụ nguồn nước, giúp giữ gìn năng lượng an lành, mang lại may mắn và sự hưng thịnh kéo dài cho làng nghề kim hoàn. Cùng với giá trị tâm linh, mặt nước ao Đền còn giúp điều hòa không khí, tạo dựng một không gian xanh mát, tĩnh lặng và hài hòa cho khu vực đền thờ."
+          ],
+          "contentEn": [
+            "Situated at the front-right section of the courtyard, the ancient Temple pond embodies traditional architectural harmony. Within the sacred \"Dragons and Tigers bowing\" landscape, the pond serves as a vital water-gathering site, designed to preserve peaceful energy, attract good fortune, and foster the long-term prosperity of the goldsmithing community. In addition to its spiritual role, the open water naturally tempers the climate, creating a cool, peaceful, and balanced atmosphere for the temple grounds."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum1.mp3",
+        "vi": "vi/cum1.mp3"
+      }
+    },
+    {
+      "id": "scene-3",
+      "title": "Lối vào sân trong",
+      "titleEn": "Inner courtyard entrance",
+      "image": "panoramas/03.webp",
+      "yaw": -86.4,
+      "pitch": -10.4,
+      "position": {
+        "x": 29,
+        "y": 59
+      },
+      "links": [
+        {
+          "targetId": "scene-2",
+          "yaw": 5.8,
+          "pitch": -18.6,
+          "nextYaw": 8.6
+        },
+        {
+          "targetId": "scene-7",
+          "yaw": -86.1,
+          "pitch": -13.9,
+          "nextYaw": 92.1
+        }
+      ],
+      "markers": [
+        {
+          "id": "ao-dinh-loi-vao",
+          "yaw": 109,
+          "pitch": -13,
+          "title": "Ao Đình",
+          "titleEn": "The Communal House Feng Shui Pond",
+          "content": [
+            "Hiện diện bên góc trái trước khoảng sân di tích là chiếc ao Đình lung linh bóng nước. Nhìn theo phong thủy cổ truyền trong tổng thể \"Long chầu hổ phục\", chiếc ao đóng vai trò như điểm tụ thủy tự nhiên giúp tích tụ những điều may mắn, bảo vệ sự bình an và đem lại sự phát đạt cho cả cộng đồng dân làng. Không chỉ mang ý nghĩa che chở cho khu di tích, ao Đình còn góp phần làm mát không gian, mang đến vẻ đẹp sơn thủy hữu tình và nét thanh bình đặc trưng cho ngôi đình."
+          ],
+          "contentEn": [
+            "Positioned at the front-left side of the courtyard, the ancient Communal House pond reflects the timeless beauty of the complex. According to traditional feng shui principles based on the \"Dragons and Tigers bowing\" layout, the pond functions as a natural water reservoir that gathers blessings, safeguards peace, and promotes collective prosperity for the village. Beyond its protective symbolism, the pond helps refresh the surrounding air, bestowing a picturesque and serene ambiance upon the entire heritage site."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum1.mp3",
+        "vi": "vi/cum1.mp3"
+      }
+    },
+    {
+      "id": "scene-4",
+      "title": "Vườn giữa hai ao",
+      "titleEn": "Garden between the ponds",
+      "image": "panoramas/04.webp",
+      "yaw": -37.9,
+      "pitch": -13.6,
+      "position": {
+        "x": 67,
+        "y": 56
+      },
+      "links": [
+        {
+          "targetId": "scene-2",
+          "yaw": -177.2,
+          "pitch": -22,
+          "nextYaw": 182.4
+        },
+        {
+          "targetId": "scene-5",
+          "yaw": -112.4,
+          "pitch": -14.3,
+          "nextYaw": -89.5
+        }
+      ],
+      "markers": [
+        {
+          "id": "ao-den-vuon",
+          "yaw": 58,
+          "pitch": -8,
+          "title": "Ao Đền",
+          "titleEn": "The Temple Feng Shui Pond",
+          "content": [
+            "Tọa lạc tại góc phải phía trước sân di tích là ao Đền cổ kính, mang đậm dấu ấn kiến trúc truyền thống. Dưới góc nhìn phong thủy với thế đất \"Long chầu hổ phục\", lòng ao đóng vai trò là nơi tích tụ nguồn nước, giúp giữ gìn năng lượng an lành, mang lại may mắn và sự hưng thịnh kéo dài cho làng nghề kim hoàn. Cùng với giá trị tâm linh, mặt nước ao Đền còn giúp điều hòa không khí, tạo dựng một không gian xanh mát, tĩnh lặng và hài hòa cho khu vực đền thờ."
+          ],
+          "contentEn": [
+            "Situated at the front-right section of the courtyard, the ancient Temple pond embodies traditional architectural harmony. Within the sacred \"Dragons and Tigers bowing\" landscape, the pond serves as a vital water-gathering site, designed to preserve peaceful energy, attract good fortune, and foster the long-term prosperity of the goldsmithing community. In addition to its spiritual role, the open water naturally tempers the climate, creating a cool, peaceful, and balanced atmosphere for the temple grounds."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum1.mp3",
+        "vi": "vi/cum1.mp3"
+      }
+    },
+    {
+      "id": "scene-5",
+      "title": "Sân đình — cây cổ thụ",
+      "titleEn": "Courtyard and ancient tree",
+      "image": "panoramas/05.webp",
+      "yaw": -89.5,
+      "pitch": -9,
+      "position": {
+        "x": 49,
+        "y": 46
+      },
+      "links": [
+        {
+          "targetId": "scene-2",
+          "yaw": 91.5,
+          "pitch": -23,
+          "nextYaw": 97.2
+        },
+        {
+          "targetId": "scene-4",
+          "yaw": 35.7,
+          "pitch": -21.8,
+          "nextYaw": -37.9
+        },
+        {
+          "targetId": "scene-6",
+          "yaw": -132.9,
+          "pitch": -21.5,
+          "nextYaw": -101
+        },
+        {
+          "targetId": "scene-9",
+          "yaw": -18.6,
+          "pitch": -11.2,
+          "nextYaw": -88.9
+        },
+        {
+          "targetId": "scene-13",
+          "yaw": -63.9,
+          "pitch": -18.8,
+          "nextYaw": -83.7
+        }
+      ],
+      "markers": [
+        {
+          "id": "san-dinh",
+          "yaw": -161.6,
+          "pitch": -12.3,
+          "title": "Sân đình",
+          "titleEn": "The Communal Courtyard",
+          "content": [
+            "Sân đình là không gian mở rộng lớn được lát gạch kiên cố và được che chở bởi những cây cổ thụ trăm tuổi. Nơi đây vốn là chứng nhân lịch sử chứng kiến bao thế hệ cư dân Định Công tụ họp, bàn việc làng, lập hương ước và tổ chức các nghi thức tế lễ, hội làng truyền thống vào ngày mùng 12 tháng Hai âm lịch hằng năm."
+          ],
+          "contentEn": [
+            "The communal courtyard is a spacious open area paved with sturdy bricks and shaded by century-old ancient trees. It stands as a living historical witness where generations of Dinh Cong villagers gathered to discuss local affairs, establish village codes, and celebrate the traditional annual festival on the 12th day of the second lunar month."
+          ]
+        },
+        {
+          "id": "y-nghia-be-da-cong-trinh",
+          "yaw": 268,
+          "pitch": -3,
+          "title": "Ý nghĩa bệ đá công trình",
+          "titleEn": "Significance of the Monument Pedestal",
+          "content": [
+            "Bệ đá được dựng lên như một cột mốc ghi danh, mang ý nghĩa tôn vinh những bước phát triển và đóng góp quan trọng của địa phương. Tấm biển đồng trang trọng gắn trên bệ đá khẳng định giá trị lịch sử của công trình kỷ niệm, đồng thời làm điểm tựa vững chắc để trưng bày các biểu tượng văn hóa thay đổi theo từng mùa lễ hội của làng nghề Định Công."
+          ],
+          "contentEn": [
+            "The stone pedestal serves as a commemorative landmark honoring the community's progress and key achievements. The bronze plaque mounted on the front highlights its historical significance, while the sturdy pedestal itself provides a lasting base to showcase seasonal cultural symbols during local village celebrations."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum2.mp3",
+        "vi": "vi/cum2.mp3"
+      }
+    },
+    {
+      "id": "scene-6",
+      "title": "Sân trước Đại Bái",
+      "titleEn": "Main hall courtyard",
+      "image": "panoramas/06.webp",
+      "yaw": -101,
+      "pitch": -3.8,
+      "position": {
+        "x": 38,
+        "y": 41
+      },
+      "links": [
+        {
+          "targetId": "scene-5",
+          "yaw": 55.1,
+          "pitch": -20.1,
+          "nextYaw": 47.1
+        },
+        {
+          "targetId": "scene-7",
+          "yaw": -134.5,
+          "pitch": -27.6,
+          "nextYaw": 91.2
+        }
+      ],
+      "markers": [
+        {
+          "id": "ban-tho-than-nong",
+          "yaw": 268,
+          "pitch": 2,
+          "title": "Ban thờ Thần Nông nơi sân đình",
+          "titleEn": "The Altar of Than Nong (God of Agriculture)",
+          "content": [
+            "Ban thờ Thần Nông được bố trí trang trọng ở không gian lộ thiên ngoài sân đình, phản ánh sâu sắc cội nguồn lịch sử nông nghiệp trù phú lâu đời của làng cổ Định Công trước khi phát triển nghề thủ công chạm khắc vàng bạc.",
+            "Đây là nơi thờ phụng vị thần cai quản nông nghiệp, gắn liền với ước vọng ngàn đời của cư dân bản địa cầu xin Thần Nông Đại Đế ban cho mưa thuận gió hòa, thiên thời địa lợi, mùa màng luôn tốt tươi, vạn vật hanh thông và đời sống nhân dân được no ấm, bình an."
+          ],
+          "contentEn": [
+            "Solemnly positioned in the open-air courtyard, the Altar of Than Nong deeply reflects the agricultural origins of ancient Dinh Cong village before its evolution into a famous handicraft center.",
+            "Dedicated to the supreme deity of agriculture, this sacred altar embodies the local community's timeless prayers for favorable weather, fertile harvests, harmonious nature, and peaceful, prosperous lives."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum2.mp3",
+        "vi": "vi/cum2.mp3"
+      }
+    },
+    {
+      "id": "scene-7",
+      "title": "Bình phong & trụ biểu",
+      "titleEn": "Screen wall and pillars",
+      "image": "panoramas/07.webp",
+      "yaw": 91.2,
+      "pitch": -5.7,
+      "position": {
+        "x": 28,
+        "y": 35
+      },
+      "links": [
+        {
+          "targetId": "scene-3",
+          "yaw": -300,
+          "pitch": -22.4,
+          "nextYaw": 33.9
+        },
+        {
+          "targetId": "scene-6",
+          "yaw": 0,
+          "pitch": -22.1,
+          "nextYaw": -101
+        },
+        {
+          "targetId": "scene-8",
+          "yaw": -90,
+          "pitch": -23.6,
+          "nextYaw": -87.3
+        }
+      ],
+      "markers": [
+        {
+          "id": "binh-phong-tru-bieu",
+          "yaw": 88.8,
+          "pitch": 4,
+          "title": "Bức bình phong và hệ thống trụ biểu trong sân đình",
+          "titleEn": "Screen Wall and Pillars in the Communal House Courtyard",
+          "content": [
+            "Nổi bật giữa khoảng sân rộng là bức bình phong cổ kính mang hình dáng một cuốn thư xòe mở. Chính giữa bức bình phong đắp nổi chữ \"Thọ\" tròn đơm hoa, phía trên là hình ảnh hai con rồng chầu mặt trời cùng các họa tiết mây, hoa mai trang trí rực rỡ. Theo dân gian, bức bình phong giống như một tấm bình che chắn, giúp ngăn gió độc, cản điềm xấu và giữ lại sự bình an, thanh tĩnh cho nơi thờ tự.",
+            "Hai bên bình phong là các cột trụ cao chạm khắc câu đối chữ Hán, trên đỉnh trụ đặt hình linh vật con nghê và chim phượng. Nhờ nghệ thuật đắp gốm sứ thủ công khéo léo, bức bình phong và hàng cột trụ đã tạo nên vẻ đẹp uy nghi, cổ kính cho khoảng sân đình Định Công Thượng."
+          ],
+          "contentEn": [
+            "Standing at the center of the courtyard is an ancient screen wall shaped like an open scroll. The center displays a carved circular \"Longevity\" character, flanked by dragons and floral patterns. In local tradition, this screen acts as a protective shield, blocking bad omens while keeping peace and harmony within the sacred space.",
+            "On both sides stand tall pillars inscribed with traditional Chinese couplets and topped with mythical figures. Crafted with traditional porcelain inlay, the screen wall and pillars give the courtyard of Dinh Cong Thuong communal house a solemn and timeless beauty."
+          ]
+        },
+        {
+          "id": "mieu-tho-mau",
+          "yaw": -163.2,
+          "pitch": 4,
+          "title": "Miếu thờ Mẫu trong khuôn viên di tích",
+          "titleEn": "The Mother Goddess Shrine Within the Relic Complex",
+          "content": [
+            "Nằm ngay sát cạnh ngôi Đình chính, Miếu thờ Mẫu là hạng mục tâm linh được xây dựng nhằm đáp ứng nhu cầu tín ngưỡng thờ Mẫu Tam phủ lâu đời của người dân địa phương. Ngôi miếu thờ phụng Thánh Mẫu cùng các vị Cô, Cậu, thể hiện sự dung hợp hài hòa giữa tín ngưỡng thờ Mẫu dân gian với tín ngưỡng thờ Thành hoàng làng tại chính điện.",
+            "Với quy mô nhỏ nhắn và kiến trúc cổ kính đồng nhất với tổng thể di tích, nơi đây là khoảng không gian thanh tịnh để bách gia trăm họ gửi gắm những ước vọng bình dị về sức khỏe, bình an, may mắn và sự no ấm trong cuộc sống hằng ngày."
+          ],
+          "contentEn": [
+            "Located adjacent to the main Communal House, the Mother Goddess Shrine was erected to satisfy the longstanding local tradition of Tam Phu Mother Goddess worship. Dedicated to the Holy Mothers and attendant deities, it reflects a harmonious integration of indigenous folk beliefs with the veneration of the Tutelary Deities.",
+            "Modest in scale with ancient architecture matching the complex, the shrine offers a tranquil space where visitors and local inhabitants present humble prayers for health, peace, prosperity, and good fortune."
+          ]
+        },
+        {
+          "id": "bia-cong-duc-ke-ao-dinh",
+          "yaw": 48.8,
+          "pitch": 0,
+          "title": "Bia công đức nâng cấp kè ao Đình",
+          "titleEn": "Commemorative Stele for the Communal House Pond Embankment",
+          "content": [
+            "Bia công đức dựng năm 2010 ghi danh sự đóng góp của nhân dân nhân dịp kỷ niệm 1000 năm Thăng Long - Hà Nội. Công trình tôn tạo kè ao Đình giúp bảo vệ cảnh quan và giữ gìn không gian phong thủy cho cụm di tích. Hai trụ bia khắc chữ \"ĐỨC\" (德) và \"TÂM\" (心), nhắc nhở về đạo lý sống hướng thiện và lòng biết ơn của cộng đồng."
+          ],
+          "contentEn": [
+            "Erected in 2010 to mark the Millennial Anniversary of Thang Long - Hanoi, this stele honors community contributions to the pond embankment project. The restoration preserves the scenic and geomantic setting of the heritage site. Flanked by the Chinese characters for \"Virtue\" and \"Heart,\" it reflects the villagers' enduring reverence and devotion."
+          ]
+        },
+        {
+          "id": "toa-dai-bai",
+          "yaw": -101,
+          "pitch": 6,
+          "title": "Toà Đại Bái đình Định Công Thượng",
+          "titleEn": "The Great Ceremonial Hall (Dai Bai) of Dinh Cong Thuong",
+          "content": [
+            "Toà Đại Bái là không gian kiến trúc trung tâm nằm ngay sau sân đình. Mang đậm dáng dấp của nghệ thuật kiến trúc thời Lê Trung Hưng, công trình được xây dựng thấp với phần mái trầm mặc rất dài so với chiều cao và lợp ngói ta truyền thống. Ngôi đình nổi bật với kiểu tường hồi bít đốc, bờ nóc hai đầu đắp đầu kìm vững chãi, bờ dải xây vuông cạnh nhô cao.",
+            "Bên trong toà Đại Bái là bộ khung gồm 6 bộ vì kèo bằng gỗ lim tròn vững chãi có đường kính lên tới 0.40m, liên kết theo kiểu \"chồng rường bẩy hiên\" và \"trụ trốn kẻ suốt\". Chân cột kê trên các khối đá vuông chạm khắc hoa cúc dây, hình bán nguyệt và sóng nước cổ kính mang phong cách nghệ thuật thế kỷ 17.",
+            "Toà Đại Bái không chỉ là không gian hành lễ trang trọng trong các kỳ lễ hội mà còn là nơi lưu giữ hệ thống hoành phi, câu đối sơn son thếp vàng, bộ bát bửu, chấp kích chạm khắc tinh vi, thể hiện đỉnh cao của nghệ thuật điêu khắc gỗ cổ truyền."
+          ],
+          "contentEn": [
+            "The Great Ceremonial Hall stands as the architectural centerpiece behind the courtyard. Embodying the distinct traits of the Restored Le Dynasty, the hall features a low-profile structure with an elongated, sweeping roof tiled in traditional terracotta tiles, sturdy gable end-walls, and prominent ridge ornaments.",
+            "Inside, the hall is supported by six massive ironwood truss frames up to 0.40m in diameter, built using overlapping beams, eave brackets, and recessed pillars with pass-through rafters. The pillars rest on square stone pedestals exquisitely carved with chrysanthemums and wave patterns dating back to the 17th century.",
+            "The hall serves as the primary space for solemn rituals during village festivals while housing gold-lacquered horizontal boards, couplets, and ceremonial weaponry that showcase the pinnacle of traditional woodcarving art."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum2.mp3",
+        "vi": "vi/cum2.mp3"
+      }
+    },
+    {
+      "id": "scene-8",
+      "title": "Tòa Đại Bái",
+      "titleEn": "Main ceremonial hall",
+      "image": "panoramas/08.webp",
+      "yaw": -87.3,
+      "pitch": 4,
+      "position": {
+        "x": 27,
+        "y": 24
+      },
+      "links": [
+        {
+          "targetId": "scene-7",
+          "yaw": 158.8,
+          "pitch": -26.6,
+          "nextYaw": -88.1
+        },
+        {
+          "targetId": "scene-9",
+          "yaw": 20,
+          "pitch": -20,
+          "nextYaw": 90
+        }
+      ],
+      "markers": [
+        {
+          "id": "ban-tho-cong-dong",
+          "yaw": -75.7,
+          "pitch": 7.8,
+          "title": "Ban thờ Công Đồng tại toà Đại Bái",
+          "titleEn": "The Community Altar at the Great Ceremonial Hall",
+          "content": [
+            "Ban thờ Công Đồng được tích hợp trang trọng tại gian giữa của tòa Đại Bái, giữ vai trò là trung tâm hội họp tâm linh cao nhất của di tích, nơi phối thờ hội đồng các vị thần linh, thánh mẫu và các bậc tiền nhân có công với nước, với dân.",
+            "Điểm nhấn nghệ thuật đỉnh cao tại đây chính là bức cửa võng dạng chân quỳ dạ cá chạm bong, chạm thủng cực kỳ tinh xảo thời Lê - Nguyễn. Bức cửa võng khắc họa chữ Song Hỷ trên nền vân mây cùng hình ảnh Bát vị Tiên Ông cưỡi linh vật và tiên ông bụng phệ cưỡi hổ với nụ cười sảng khoái.",
+            "Tại ban thờ Công Đồng, các đồ tế khí như đỉnh đồng nắp hình sư tử, cặp hạc chầu trên lưng rùa, chân đèn, lọ hoa sứ men xanh cùng bộ bát bửu, chấp kích được bài trí trang nghiêm, thể hiện lòng tri ân sâu sắc của bách gia trăm họ đối với các vị thần linh."
+          ],
+          "contentEn": [
+            "The Community Altar is solemnly integrated in the central compartment of the Great Hall, acting as the primary spiritual focal point of the relic. It serves as a collective altar dedicated to all deities, holy mothers, and revered ancestors who contributed to the nation and community.",
+            "The artistic highlight is a magnificent wooden canopy crafted using high-relief and open-work techniques from the Le-Nguyen eras. It depicts the Double Happiness character amid clouds, alongside the Eight Immortals riding mythical beasts and a cheerful, plump immortal riding a tiger.",
+            "The altar showcases precious offerings including a lion-topped bronze incense burner, sacred cranes standing on turtles, candle stands, blue-glazed porcelain vases, and ceremonial weapons, embodying the deep reverence of the community."
+          ]
+        },
+        {
+          "id": "hau-cung-cung-cam",
+          "yaw": -95.4,
+          "pitch": 19.7,
+          "title": "Hậu cung — cung cấm đình Định Công Thượng",
+          "titleEn": "The Inner Sanctum of Dinh Cong Thuong Communal House",
+          "content": [
+            "Hậu cung là nơi linh thiêng nhất của ngôi Đình. Không gian nơi đây được xây trên nền cao, hệ vì kèo gỗ đơn giản, chắc chắn dựa vào bức tường hậu, tạo nên vẻ thâm nghiêm và ấm cúng.",
+            "Bên trong bài trí trang nghiêm với bức hoành phi cổ \"VẠN CỔ ANH LINH\" treo phía trên. Điện thờ đặt tượng Thành hoàng khoác áo ngọc bào đỏ, phía trước là hương án sơn son thếp vàng chạm khắc tinh xảo cùng bộ đồ thờ, hạc chầu, lộc bình sứ men xanh, cờ ngũ sắc và câu đối lộng lẫy, gìn giữ nguyên vẹn mạch ngầm tâm linh qua nhiều thế hệ."
+          ],
+          "contentEn": [
+            "The inner sanctum is the most sacred sanctuary of the Communal House. Built on an elevated platform with a sturdy timber roof frame, it exudes a majestic and serene atmosphere.",
+            "The altar is solemnly arranged beneath an ancient lacquered board inscribed with \"Van Co Anh Linh\" (Eternal Spiritual Sovereignty). It enshrines the revered deity statue clad in a ceremonial red robe, fronted by a gold-lacquered carved altar table, complete ritual artifacts, sacred cranes, blue-and-white porcelain urns, traditional flags, and gilded couplets, preserving the village's spiritual heritage across generations."
+          ]
+        },
+        {
+          "id": "bat-buu-chap-kich",
+          "yaw": 310,
+          "pitch": 4,
+          "title": "Bộ bát bửu và chấp kích tại chính điện",
+          "titleEn": "The Eight Precious Objects and Ceremonial Weapons",
+          "content": [
+            "Dàn bát bửu và chấp kích được bài trí trang nghiêm tại tòa Đại Bái, gồm các binh khí cổ như đao, thương và đinh ba được chạm khắc từ gỗ quý, sơn son thếp vàng rực rỡ, cắm trên giá gáo đắp hình đầu rồng. Bộ tế khí không chỉ tôn thêm vẻ thâm nghiêm cho chốn điện thờ mà còn tượng trưng cho sức mạnh trấn trạch, thể hiện kỹ thuật chạm khắc gỗ cổ truyền tinh xảo của tiền nhân."
+          ],
+          "contentEn": [
+            "Solemnly displayed in the Great Hall, the Eight Precious Objects include ancient ceremonial arms such as halberds, spears, and tridents carved from hardwood, brilliantly gilded, and set on a dragon-adorned wooden rack. Beyond enhancing the sacred ambiance, these ritual weapons symbolize divine protection while showcasing the exquisite traditional woodcarving craftsmanship of past generations."
+          ]
+        },
+        {
+          "id": "he-thong-cau-doi-co",
+          "yaw": 203,
+          "pitch": 8,
+          "title": "Hệ thống câu đối cổ tại di tích",
+          "titleEn": "The Ancient Parallel Sentences (Couplets)",
+          "content": [
+            "Hệ thống câu đối cổ bằng gỗ được treo trang trọng trên các thân cột lim tròn tại tòa Đại Bái và Đền thờ. Các bức câu đối được sơn son thếp vàng lộng lẫy, nhiều đôi chạm nổi họa tiết hoa cúc dây, hình đôi dơi xòe cánh ngậm chữ Thọ mang đậm dấu ấn nghệ thuật thời Nguyễn.",
+            "Các bức câu đối chứa đựng những dòng chữ Hán nét đúc sắc sảo, ca ngợi thần lực vĩ đại, công lao đánh giặc cứu dân của hai vị Thành hoàng làng, đồng thời tôn vinh bàn tay tài hoa và đạo lý \"Uống nước nhớ nguồn\" đối với các bậc Tổ nghề kim hoàn."
+          ],
+          "contentEn": [
+            "A collection of ancient lacquered wooden couplets adorns the solid ironwood pillars of the Great Hall and Temple. Brilliantly gilded, many feature carved chrysanthemum vines and bats with spreading wings holding longevity symbols, characteristic of Nguyen Dynasty art.",
+            "The sharply carved Chinese characters praise the supreme divine powers and patriotic merits of the Tutelary Deities, while honoring the legendary artistry and gratitude owed to the Goldsmith Ancestors."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum3.mp3",
+        "vi": "vi/cum3.mp3"
+      }
+    },
+    {
+      "id": "scene-9",
+      "title": "Bình phong đá sân đền",
+      "titleEn": "Temple stone screen",
+      "image": "panoramas/09.webp",
+      "yaw": -88.9,
+      "pitch": -9.2,
+      "position": {
+        "x": 71,
+        "y": 39
+      },
+      "links": [
+        {
+          "targetId": "scene-5",
+          "yaw": -18.1,
+          "pitch": -18.1,
+          "nextYaw": -89.5
+        },
+        {
+          "targetId": "scene-10",
+          "yaw": 91.3,
+          "pitch": -17.1,
+          "nextYaw": -86.1
+        }
+      ],
+      "markers": [
+        {
+          "id": "binh-phong-da-san-den",
+          "yaw": 269,
+          "pitch": -2,
+          "title": "Ý nghĩa bức bình phong đá tại sân đền Tổ nghề Kim hoàn",
+          "titleEn": "Significance of the Stone Screen Wall at the Goldsmith Ancestors Temple",
+          "content": [
+            "Bức bình phong đá tại sân Đền Tổ nghề Kim hoàn mang ý nghĩa che chắn, ngăn cản luồng khí xấu và giữ lại sự thanh tịnh, vượng khí cho chốn linh thiêng. Chính giữa bình phong đắp nổi chữ \"THỌ\" tròn cổ kính, biểu tượng cho sức khỏe, sự trường tồn và nguyện ước cho nghề kim hoàn Định Công luôn phát triển bền vững qua nhiều thế hệ."
+          ],
+          "contentEn": [
+            "The stone screen wall acts as a protective shield to ward off negative energies and preserve peace within the sacred temple grounds. Carved with a central circular \"Longevity\" character, it symbolizes good health, endurance, and the wish for Dinh Cong's traditional goldsmithing craft to thrive for generations."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum4.mp3",
+        "vi": "vi/cum4.mp3"
+      }
+    },
+    {
+      "id": "scene-10",
+      "title": "Sân trước đền",
+      "titleEn": "Temple courtyard",
+      "image": "panoramas/10.webp",
+      "yaw": -87,
+      "pitch": -7.3,
+      "position": {
+        "x": 71,
+        "y": 30
+      },
+      "links": [
+        {
+          "targetId": "scene-9",
+          "yaw": 93.9,
+          "pitch": -25,
+          "nextYaw": -88.7
+        },
+        {
+          "targetId": "scene-11",
+          "yaw": -84.4,
+          "pitch": -23.1,
+          "nextYaw": -88.3
+        }
+      ],
+      "markers": [
+        {
+          "id": "duong-vao-den-tho",
+          "yaw": 268,
+          "pitch": -5,
+          "title": "Đường vào đền thờ",
+          "titleEn": "The Path to the Temple",
+          "content": [
+            "Lối đi này dẫn vào Đền thờ Tổ nghề — hạng mục nằm bên phải trong quần thể di tích, thờ phụng ba anh em Trần Điền, Trần Điện, Trần Hòa dưới thời Lý Nam Đế vào thế kỷ thứ 6.",
+            "Đền được cấu trúc theo kiểu Chuôi vồ gồm Đại Đền 5 gian và Hậu cung 3 gian."
+          ],
+          "contentEn": [
+            "This path leads to the Goldsmith Ancestors Temple, the right-hand component of the complex, honoring the three brothers Tran Dien, Tran Dien, and Tran Hoa from the 6th century reign of Emperor Ly Nam De.",
+            "The temple features a traditional chuôi vồ layout with a 5-bay main hall and 3-bay sanctum."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum4.mp3",
+        "vi": "vi/cum4.mp3"
+      }
+    },
+    {
+      "id": "scene-11",
+      "title": "Đền thờ Tổ nghề Kim hoàn",
+      "titleEn": "Goldsmith Ancestors Temple",
+      "image": "panoramas/11.webp",
+      "yaw": -88.9,
+      "pitch": -2.1,
+      "position": {
+        "x": 72,
+        "y": 20
+      },
+      "links": [
+        {
+          "targetId": "scene-10",
+          "yaw": 91.7,
+          "pitch": -22.6,
+          "nextYaw": 95.6
+        },
+        {
+          "targetId": "scene-12",
+          "yaw": -85.7,
+          "pitch": -17.9,
+          "nextYaw": -82.7
+        },
+        {
+          "targetId": "scene-13",
+          "yaw": -154.5,
+          "pitch": -21.7,
+          "nextYaw": -93
+        }
+      ],
+      "markers": [
+        {
+          "id": "den-tho-to-nghe-kim-hoan",
+          "yaw": 270,
+          "pitch": 6,
+          "title": "Đền thờ Tổ nghề Kim hoàn",
+          "titleEn": "The Goldsmith Ancestors Temple and Inner Sanctum",
+          "content": [
+            "Đền thờ Tổ nghề nằm trong quần thể di tích là hạng mục lịch sử mang đặc trưng độc nhất vô nhị. Nơi đây thờ phụng ba anh em Trần Điền, Trần Điện, Trần Hòa dưới thời Lý Nam Đế vào thế kỷ thứ 6, những người đã có công khai sáng, truyền dạy kỹ nghệ chế tác nữ trang vàng bạc nhỏ nhắn, tinh xảo cho dân cư bản địa, đặt nền móng đầu tiên cho làng nghề Định Công phát đạt và góp phần hình thành nên phố Hàng Bạc Thăng Long.",
+            "Đền được cấu trúc theo kiểu Chuôi vồ gồm Đại Đền 5 gian và Hậu cung 3 gian. Đặc biệt, 3 gian giữa Đại Đền được xây theo kiểu \"hai tầng mái\" tạo thành 4 bức tường hồi cổ kính, bờ nóc đắp hình mặt trời và đôi rồng chầu mang đậm phong cách kiến trúc thời Nguyễn."
+          ],
+          "contentEn": [
+            "The Goldsmith Ancestors Temple within the complex holds exceptional historical significance. It honors three brothers, Tran Dien, Tran Dien, and Tran Hoa, from the 6th century reign of Emperor Ly Nam De, who taught local villagers the art of crafting fine gold and silver jewelry, founding the legendary Dinh Cong craft village and shaping Thang Long's historic Hang Bac street.",
+            "The temple features a traditional chuôi vồ layout with a 5-bay main hall and 3-bay sanctum. Remarkably, the three central bays of the Main Hall feature a rare two-tiered roof system forming four ancient gable walls topped with a sun disc and bowing dragons, showcasing classic Nguyen Dynasty architecture."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum5.mp3",
+        "vi": "vi/cum5.mp3"
+      }
+    },
+    {
+      "id": "scene-12",
+      "title": "Bên trong đền thờ",
+      "titleEn": "Inside the temple",
+      "image": "panoramas/12.webp",
+      "yaw": -91.9,
+      "pitch": -1.9,
+      "position": {
+        "x": 72,
+        "y": 10
+      },
+      "links": [
+        {
+          "targetId": "scene-11",
+          "yaw": 97.3,
+          "pitch": -35.5,
+          "nextYaw": 94.3
+        }
+      ],
+      "markers": [
+        {
+          "id": "ban-tho-tam-phu-cong-dong",
+          "yaw": -101.1,
+          "pitch": 10.8,
+          "title": "Ban thờ Tam phủ Công đồng đền thờ Tổ nghề",
+          "titleEn": "Tam Phu Cong Dong Altar at the Goldsmith Ancestors Temple",
+          "content": [
+            "Ban thờ Tam phủ Công đồng bài trí trang nghiêm tại gian chính, nơi phụng thờ hội đồng các vị Thần linh, Thánh Mẫu và các bậc Tiền hiền có công với dân với nước. Phía trên treo bức hoành phi \"HỮU CÔNG Ư DÂN\" (Có công với dân) cùng bộ cửa võng chạm rồng sơn son thếp vàng lộng lẫy. Bên trong đặt bức hoành phi \"TẠO HÓA PHÂN CÔNG\" cùng bàn thờ gỗ cổ, đồ tế khí và đôi lộc bình đồng uy nghiêm. Hai bên tôn nghiêm với đôi câu đối vàng ca ngợi công đức truyền dạy nghề kim hoàn và sự ghi danh trong sử sách của Tam vị Tổ nghề qua nhiều thế hệ."
+          ],
+          "contentEn": [
+            "The Tam Phu Cong Dong Altar is solemnly set in the central hall, dedicated collectively to the realm of deities, holy mothers, and revered ancestors. Hung beneath a lacquered board reading \"Huu Cong U Dan\" (Meritorious to the People), the altar is framed by a gold-lacquered carved dragon arch. The inner sanctuary features the board \"Tao Hoa Phan Cong\", an ancient wooden altar, ritual vessels, and bronze urns. Gilded couplets on both sides praise the Founding Masters for imparting the goldsmithing craft and securing their legacy across generations."
+          ]
+        },
+        {
+          "id": "ban-tho-tam-vi-to-nghe",
+          "yaw": -77.7,
+          "pitch": 8.7,
+          "title": "Ban thờ Tam vị Tổ nghề Kim hoàn",
+          "titleEn": "Altar of the Three Founding Masters of Goldsmithing",
+          "content": [
+            "Ban thờ Tam vị Tổ nghề là nơi phụng thờ ba anh em họ Trần gồm Trần Điền, Trần Điện và Trần Hòa, những bậc tiền hiền thời nhà Lý có công truyền dạy kỹ nghệ đậu bạc, chạm kim hoàn cho dân làng Định Công. Phía trên treo bức hoành phi cổ \"VẠN ĐẠI ƠN SƯ\" (Công ơn người thầy muôn đời) cùng bộ cửa võng chạm khắc tinh xảo. Trên sập thờ tôn nghiêm đặt ba ngai thờ phủ ngọc bào đỏ đại diện cho ba vị Tổ nghề, kết hợp cùng hệ thống đồ tế khí, lư hương, cặp đèn hoa sen thắp sáng rực rỡ và tấm bia đá cổ đặt bên cạnh, thể hiện trọn vẹn đạo lý \"Uống nước nhớ nguồn\" của các thế hệ thợ kim hoàn."
+          ],
+          "contentEn": [
+            "The Altar of the Three Founding Masters is dedicated to the Tran brothers, Tran Dien, Tran Dien, and Tran Hoa, who imparted the refined skills of goldsmithing and silver filigree to Dinh Cong village during the Ly Dynasty. Above hangs an ancient lacquered board inscribed with \"Van Dai On Su\" (Eternal Gratitude to the Masters), framed by an intricately carved wooden arch. The main altar solemnly enshrines three red-clad ancestral thrones representing the masters, accompanied by ritual vessels, glowing lotus lamps, ceremonial offerings, and an ancient stone stele on the left, embodying the enduring reverence of generations of goldsmiths toward their craft ancestors."
+          ]
+        },
+        {
+          "id": "nghe-dau-bac-dinh-cong",
+          "yaw": -175,
+          "pitch": 2,
+          "title": "Nghề đậu bạc Định Công",
+          "titleEn": "Traditional Dinh Cong Silver Filigree Craft",
+          "content": [
+            "Nghề đậu bạc Định Công là một trong tứ trụ tinh hoa làng nghề đất Thăng Long xưa. Từ nguyên liệu bạc nguyên chất, qua các công đoạn nấu thanh, cán mỏng, kéo thành những sợi chỉ bạc nhỏ mịn và se lại, người thợ tiến hành dựng khung xương, uốn ghép hoa văn tỉ mỉ rồi cố định bằng các mối hàn kín kẽ. Dưới bàn tay tài hoa của các nghệ nhân, những sợi bạc mong manh được thổi hồn thành các tác phẩm nữ trang tinh xảo, quà tặng mỹ nghệ và tranh di sản mang hình ảnh Khuê Văn Các, Tháp Rùa... Tất cả khẳng định sức sống bền bỉ của một làng nghề cổ truyền luôn không ngừng sáng tạo để lan tỏa tinh hoa văn hóa Việt."
+          ],
+          "contentEn": [
+            "The Dinh Cong silver filigree craft stands as one of the four legendary traditional crafts of ancient Thang Long. Crafted from pure silver, the intricate process involves melting, rolling, and drawing silver into microscopic threads. Artisans twist these threads, construct structural frames, and delicately solder fine patterns into seamless artistic creations. Through master craftsmanship, delicate silver strands transform into exquisite jewelry, fine art pieces, and heritage artwork depicting iconic landmarks like Khue Van Cac and Turtle Tower, showcasing the enduring vitality of Vietnam's traditional metalwork artistry."
+          ]
+        }
+      ],
+      "audio": {
+        "en": "en/cum5.mp3",
+        "vi": "vi/cum5.mp3"
+      }
+    },
+    {
+      "id": "scene-13",
+      "title": "Sân khấu lễ hội",
+      "titleEn": "Festival stage",
+      "image": "panoramas/13.webp",
+      "yaw": -83.7,
+      "pitch": -4,
+      "position": {
+        "x": 51,
+        "y": 21
+      },
+      "links": [
+        {
+          "targetId": "scene-5",
+          "yaw": 104.3,
+          "pitch": -20.8,
+          "nextYaw": 116.1
+        },
+        {
+          "targetId": "scene-11",
+          "yaw": -14.2,
+          "pitch": -16.8,
+          "nextYaw": -88.9
+        },
+        {
+          "targetId": "scene-1",
+          "yaw": -80,
+          "pitch": -30,
+          "nextYaw": -87.5
+        }
+      ],
+      "markers": [
+        {
+          "id": "san-khau-ngoai-troi",
+          "yaw": 268,
+          "pitch": 4,
+          "title": "Sân khấu ngoài trời khu lễ hội",
+          "titleEn": "Outdoor Festival Stage",
+          "content": [
+            "Nằm trong khoảng sân rộng của cụm di tích là khu vực sân khấu ngoài trời, nơi diễn ra các hoạt động văn hóa, văn nghệ và nghi thức sinh hoạt cộng đồng trong các dịp lễ tết. Sân khấu được thiết kế nền cao hơn mặt sân, phía sau dựng khung phông bạt lớn treo băng rôn kỷ niệm các sự kiện trọng đại như Lễ hội truyền thống làng Định Công. Nơi đây không chỉ là không gian biểu diễn nghệ thuật phục vụ nhân dân và du khách, mà còn là điểm hội tụ gắn kết tình làng nghĩa xóm, gìn giữ nét đẹp văn hóa đời sống của làng nghề cổ truyền."
+          ],
+          "contentEn": [
+            "Located within the spacious courtyard of the heritage complex is the outdoor festival stage, used for cultural performances, artistic shows, and community gatherings during traditional celebrations. Designed with an elevated platform and a large backdrop structure for event banners, the stage hosts key local events such as the Annual Dinh Cong Village Festival. It serves as a lively venue that connects the local community while preserving the rich cultural traditions of the historic craft village."
+          ]
+        }
+      ],
+      "audio": {}
+    },
+    {
+      "id": "scene-14",
+      "title": "Toàn cảnh từ trên cao",
+      "titleEn": "Aerial overview",
+      "image": "panoramas/14.webp",
+      "yaw": 269,
+      "pitch": -18,
+      "position": null,
+      "links": [
+        {
+          "targetId": "scene-1",
+          "yaw": 269,
+          "pitch": -32,
+          "nextYaw": -87.5
+        },
+        {
+          "targetId": "scene-15",
+          "yaw": 285,
+          "pitch": -22
+        }
+      ],
+      "markers": [],
+      "audio": {
+        "en": "en/cum0.mp3",
+        "vi": "vi/cum0.mp3"
+      }
+    },
+    {
+      "id": "scene-15",
+      "title": "Toàn cảnh Định Công",
+      "titleEn": "Dinh Cong panorama",
+      "image": "panoramas/15.webp",
+      "yaw": 256,
+      "pitch": -48,
+      "position": null,
+      "links": [
+        {
+          "targetId": "scene-14",
+          "yaw": 180,
+          "pitch": -8
+        },
+        {
+          "targetId": "scene-1",
+          "yaw": 260,
+          "pitch": -69,
+          "nextYaw": -87.5
+        }
+      ],
+      "markers": [],
+      "audio": {}
+    }
+  ]
+}

@@ -3,9 +3,12 @@ import { fileURLToPath } from 'node:url';
 import { pool, databaseUrl } from './db.js';
 import { createApp } from './app.js';
 import { EventHub, listenForChanges } from './events.js';
+import { mountLakeTour } from './vr360.js';
 
 const hub = new EventHub();
-const app = createApp(pool, hub, (process.env.WEB_ORIGINS ?? 'http://localhost:8080,http://localhost:8090').split(','));
+const origins = (process.env.WEB_ORIGINS ?? 'http://localhost:8080,http://localhost:8090').split(',');
+const app = createApp(pool, hub, origins);
+mountLakeTour(app, undefined, origins);
 const webRoot = fileURLToPath(new URL('../../build/web/', import.meta.url));
 app.use(express.static(webRoot));
 app.get('/', (_req, res) => res.type('text').send('Hanoi Guide API is running. Build Flutter Web or run flutter run -d chrome --web-port=8080.'));

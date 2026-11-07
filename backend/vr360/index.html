@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hồ Gươm VR360</title>
+  <link rel="stylesheet" href="vendor/pannellum.css">
+  <link rel="stylesheet" href="tour.css">
+  <script defer src="vendor/pannellum.js"></script>
+  <script defer src="tour.js"></script>
+</head>
+<body>
+  <main id="panorama" aria-label="Toàn cảnh 360 độ"></main>
+  <header><span>HỒ GƯƠM · VR360</span><strong id="scene-title"></strong></header>
+  <button id="map-button" type="button" hidden>Bản đồ</button>
+  <button id="previous" class="step" type="button" aria-label="Cảnh trước" hidden>‹</button>
+  <button id="next" class="step" type="button" aria-label="Cảnh sau" hidden>›</button>
+  <p id="status" role="status">Đang tải tour…</p>
+  <dialog id="details" aria-label="Thông tin địa điểm">
+    <form method="dialog"><button type="submit" aria-label="Đóng">✕</button></form>
+    <div id="content"></div>
+  </dialog>
+</body>
+</html>

@@ -8,6 +8,7 @@ import '../core/catalog.dart';
 import '../core/store.dart';
 import '../core/widgets.dart';
 import 'forms.dart';
+import 'hoan_kiem_vr360.dart';
 
 class PlacesPage extends ConsumerStatefulWidget {
   const PlacesPage({super.key});
@@ -712,6 +713,10 @@ class DetailPage extends ConsumerWidget {
             style: const TextStyle(fontSize: 10, color: muted),
           ),
         ),
+        if (collection == 'places' && id == hoanKiemLakePlaceId) ...[
+          const SizedBox(height: 16),
+          const HoanKiemTourButton(),
+        ],
         const SizedBox(height: 24),
         Text('The story', style: Theme.of(context).textTheme.headlineMedium),
         const SizedBox(height: 12),

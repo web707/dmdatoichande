@@ -24,7 +24,10 @@ export function createApp(pool: pg.Pool, hub: EventHub, origins: string[]) {
   app.use(express.json({ limit: '64kb' }));
   app.use('/api', rateLimit({ windowMs: 60000, limit: 300, standardHeaders: 'draft-8', legacyHeaders: false, message: { error: 'Too many requests. Please try again shortly.' } }));
   app.get('/api/health', async (_req, res) => { await pool.query('SELECT 1'); res.json({ status: 'ok', database: 'postgresql' }); });
-  app.get('/api/events', (req, res) => {
+  app.get('/api/events', (req, res, next) => {
+    res.vary('Accept');
+    // Regular catalog requests expect JSON. Live clients explicitly request SSE.
+    if (req.accepts(['json', 'text/event-stream']) !== 'text/event-stream') return next();
     if (hub.listenerCount('change') >= 100) throw new HttpError(503, 'Too many live connections.');
     res.set({ 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache, no-transform', 'Connection': 'keep-alive', 'X-Accel-Buffering': 'no' });
     res.flushHeaders();

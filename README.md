@@ -81,6 +81,14 @@ Mở `http://localhost:8090/`. API phục vụ thư mục `build/web`. Router d�
 
 `set-env.ps1` đặt biến cho terminal hiện tại và user; mở lại các terminal/IDE khác để nhận biến mới. Script không tự di chuyển cache hay máy ảo cũ. Binaries PostgreSQL dùng bản hệ thống đã cài, còn dữ liệu dự án ở D.
 
+## Tour VR360
+
+Tour Hồ Gươm mở từ **Explore → Hoan Kiem Lake → Explore in VR360** hoặc **More → VR360**. Chạy `python scripts/import-hoan-kiem-vr360.py` với Python có Pillow để tạo dữ liệu, rồi khởi động API. Ảnh và script gốc nằm trong `.local/vr360/hoan-kiem/source/`. API phục vụ manifest và media đã tối ưu từ thư mục `public/` cùng trình xem Pannellum. Nút **Open on Báo Nhân Dân** mở tour gốc.
+
+Mở **More → VR360 → Start 360° tour**. Tour Đình Định Công Thượng và Đền thờ Tổ nghề Kim hoàn lấy 15 cảnh từ `pdc-vr360`. Có thể kéo ảnh để xoay, bấm mũi tên hoặc sơ đồ để chuyển cảnh, mở thông tin và nghe thuyết minh tiếng Anh hoặc tiếng Việt. Ảnh, nội dung và âm thanh được đóng gói với Flutter nên tour Android chạy được khi mất mạng. Bản Web tải các tài nguyên từ máy chủ phục vụ ứng dụng.
+
+Để cập nhật từ dự án nguồn, chạy `node scripts/import-vr360.mjs D:\icss\pdc-vr360` bằng Node.js 24. Dự án nguồn cần có `sharp` và các ảnh/audio đã tối ưu trong `public/`. Script tạo lại dữ liệu và media của tour trong `assets/vr360/`.
+
 ## Kiến trúc và schema
 
 ```text

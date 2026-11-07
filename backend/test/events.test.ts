@@ -19,11 +19,20 @@ beforeAll(async () => {
   await once(server, 'listening');
 });
 afterAll(async () => { server.closeAllConnections(); server.close(); await stop(); await pool.end(); });
+it('returns an events catalog as JSON when the client does not request SSE', async () => {
+  const response = await request(app).get('/api/events').timeout({ deadline: 1500 });
+  expect(response.status).toBe(200);
+  expect(response.headers['content-type']).toContain('application/json');
+  expect(Array.isArray(response.body)).toBe(true);
+});
 it('delivers committed PostgreSQL changes to two SSE clients without exposing content', async () => {
   const address = server.address() as { port: number };
   const abort = new AbortController();
   const readers = await Promise.all([1, 2].map(async () => {
-    const response = await fetch(`http://127.0.0.1:${address.port}/api/events`, { signal: abort.signal });
+    const response = await fetch(`http://127.0.0.1:${address.port}/api/events`, {
+      signal: abort.signal,
+      headers: { Accept: 'text/event-stream' },
+    });
     expect(response.headers.get('content-type')).toContain('text/event-stream');
     const reader = response.body!.getReader();
     expect(new TextDecoder().decode((await reader.read()).value)).toContain('ready');

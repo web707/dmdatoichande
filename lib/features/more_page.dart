@@ -61,7 +61,7 @@ class MorePage extends StatelessWidget {
                 SizedBox(width: w, child: _ToolCard(
                   icon: Icons.view_in_ar_outlined,
                   title: 'VR360',
-                  subtitle: 'Street-level exploration',
+                  subtitle: 'Interactive heritage tour',
                   color: const Color(0xFF4A148C),
                   onTap: () => context.go('/tools/vr360'),
                 )),

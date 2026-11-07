@@ -13,7 +13,9 @@ import '../features/more_page.dart';
 import '../features/converter_page.dart';
 import '../features/weather_page.dart';
 import '../features/itinerary_page.dart';
+import '../features/hoan_kiem_vr360.dart';
 import '../features/vr360_page.dart';
+import '../features/vr360_tour.dart';
 
 const ink = Color(0xFF173E35);
 const paper = Color(0xFFF7F7F2);
@@ -74,6 +76,20 @@ class _HanoiAppState extends State<HanoiApp> {
             builder: (_, _) => const ItineraryPage(),
           ),
           GoRoute(path: '/tools/vr360', builder: (_, _) => const VR360Page()),
+          GoRoute(
+            path: hoanKiemTourPath,
+            builder: (_, _) => const HoanKiemTourPage(),
+          ),
+          GoRoute(
+            path: '$hoanKiemTourPath/:sceneId',
+            builder: (_, state) => HoanKiemTourPage(
+              sceneId: state.pathParameters['sceneId'],
+            ),
+          ),
+          GoRoute(
+            path: '/tools/vr360/tour',
+            builder: (_, _) => const VR360TourPage(),
+          ),
         ],
       ),
     ],
