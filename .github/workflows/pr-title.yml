@@ -1,0 +1,26 @@
+name: PR title
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions: {}
+
+jobs:
+  conventional-title:
+    name: Conventional PR title
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR title format
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          pattern='^(feat|fix|chore|docs|style|refactor|perf|test|build|ci|revert): .+'
+          if [[ "$PR_TITLE" =~ $pattern ]]; then
+            echo "OK: $PR_TITLE"
+          else
+            echo "::error::PR title must look like 'type: description' (no scope)."
+            echo "::error::Allowed types: feat, fix, chore, docs, style, refactor, perf, test, build, ci, revert"
+            echo "::error::Got: $PR_TITLE"
+            exit 1
+          fi
