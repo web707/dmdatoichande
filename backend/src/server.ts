@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { pool, databaseUrl } from './db.js';
 import { createApp } from './app.js';
 import { EventHub, listenForChanges } from './events.js';
+import { createShutdown, httpDrainMs } from './shutdown.js';
 import { mountLakeTour } from './vr360.js';
 
 const hub = new EventHub();
@@ -17,15 +18,26 @@ const stopListener = listenForChanges(databaseUrl, hub);
 const server = app.listen(Number(process.env.PORT ?? 8090), process.env.HOST ?? '127.0.0.1', (error?: Error) => {
   if (error) {
     console.error('API could not bind its port:', error.message);
-    void stopListener().then(() => pool.end());
     process.exitCode = 1;
+    stop();
     return;
   }
   console.log(`Hanoi Guide API ready on http://localhost:${process.env.PORT ?? 8090}`);
 });
-async function stop() {
-  hub.emit('offline'); server.close(); server.closeAllConnections();
-  await stopListener(); await pool.end();
+const shutdown = createShutdown(server, hub, stopListener, () => pool.end());
+let stopping = false;
+function stop() {
+  if (stopping) return;
+  stopping = true;
+  // An unresponsive database connection cannot hold the process open indefinitely.
+  const deadline = setTimeout(() => {
+    console.error('API shutdown exceeded its deadline.');
+    process.exit(1);
+  }, httpDrainMs + 5_000).unref();
+  void shutdown().catch(() => {
+    console.error('API resources could not be closed cleanly.');
+    process.exitCode = 1;
+  }).finally(() => clearTimeout(deadline));
 }
-process.once('SIGINT', () => void stop());
-process.once('SIGTERM', () => void stop());
+process.on('SIGINT', stop);
+process.on('SIGTERM', stop);

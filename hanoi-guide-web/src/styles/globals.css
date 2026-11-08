@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f7f4ec;
+  --color-surface: #fffdf8;
+  --color-ink: #21352c;
+  --color-muted: #54655b;
+  --color-accent: #2c5a49;
+  --color-line: #dbded1;
+  --color-placeholder: #e8ece1;
+  --color-hero-text: #f4f0dd;
+  --color-warm-light: #ecd9a6;
+}
+
+@layer base {
+  body {
+    @apply flex min-h-screen flex-col bg-paper text-ink;
+    font-family: system-ui, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: Cambria, "Times New Roman", "Noto Serif", serif;
+    font-weight: 600;
+  }
+
+  :focus-visible {
+    outline: 2px solid #8e431f;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .site-width { @apply mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-12; }
+  .brand { @apply inline-flex items-center gap-2 text-lg font-semibold tracking-tight; }
+  .brand-mark { @apply grid size-8 place-items-center rounded-sm bg-accent text-sm text-white; }
+  .nav-link { @apply inline-flex min-h-11 items-center border-b-2 border-accent px-1 text-sm font-semibold text-accent; }
+  .skip-link { @apply absolute top-2 left-2 z-20 -translate-y-24 rounded-md bg-surface px-3 py-2 focus:translate-y-0; }
+  .eyebrow { @apply text-xs font-semibold tracking-[0.18em] uppercase; }
+
+  .hero {
+    @apply relative flex min-h-84 flex-col justify-center overflow-hidden rounded-2xl bg-accent px-5 pt-10 pb-13 text-white sm:min-h-100 sm:px-10 lg:px-14;
+    background-image: linear-gradient(90deg, #143027fa, #143027dd 38%, #14302765), url('/images/hoan-kiem.webp');
+    background-position: center, center 41%;
+    background-size: cover;
+  }
+
+  @media (width < 40rem) {
+    .hero {
+      background-image: linear-gradient(90deg, #143027f2, #143027c9 58%, #14302773), url('/images/hoan-kiem-small.webp');
+    }
+  }
+
+  .hero-credit {
+    @apply absolute right-4 bottom-4 rounded-sm bg-ink px-2 py-1 text-xs text-white underline underline-offset-2;
+  }
+
+  .search-input { @apply h-11 min-w-0 flex-1 rounded-lg border border-line bg-surface px-3 text-base text-ink placeholder:text-muted; }
+  .action-button { @apply inline-flex min-h-11 shrink-0 cursor-pointer items-center justify-center rounded-lg bg-accent px-4 text-sm font-semibold text-white hover:bg-ink; }
+  .text-link { @apply inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-4; }
+  .message-panel { @apply rounded-2xl border border-line bg-surface p-6 sm:p-8; }
+}

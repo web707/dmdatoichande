@@ -7,38 +7,84 @@ import type pg from 'pg';
 import { collectionSchema, credentialsSchema, parseRecord, uuidSchema } from './validation.js';
 import { hashPassword, verifyPassword, newToken, tokenHash } from './security.js';
 import type { EventHub } from './events.js';
+import { createDestinationsRouter } from './destinations.js';
+import { apiTelemetry } from './request-telemetry.js';
 
 type User = { id: string; email: string; role: 'admin' | 'traveler' };
 class HttpError extends Error { constructor(public status: number, message: string) { super(message); } }
+const serviceUnavailable = 'Service is unavailable. Please try again.';
+const sseFrame = (data: object) => `data: ${JSON.stringify(data)}\n\n`;
+const reconnectingFrame = sseFrame({ type: 'reconnecting' });
 
 export function createApp(pool: pg.Pool, hub: EventHub, origins: string[]) {
   const app = express();
+  let databaseCheck: Promise<unknown> | undefined;
+  const checkDatabase = () => {
+    databaseCheck ??= pool.query('SELECT 1').finally(() => { databaseCheck = undefined; });
+    return databaseCheck;
+  };
   app.disable('x-powered-by');
+  app.use('/api', apiTelemetry(process.env.API_LOG_REQUESTS === '1'));
   // Flutter's CanvasKit/WASM renderer needs a dedicated deployment CSP; keep API protections.
   app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false, crossOriginResourcePolicy: { policy: 'cross-origin' } }));
   app.use((req, _res, next) => {
     if (req.headers.origin && !origins.includes(req.headers.origin)) return next(new HttpError(403, 'Origin is not allowed.'));
     next();
   });
-  app.use(cors({ origin: origins, exposedHeaders: ['Content-Type'] }));
+  app.use(cors({ origin: origins, exposedHeaders: ['Content-Type', 'X-Request-Id'] }));
+  app.use((_req, res, next) => {
+    if (!hub.isShuttingDown) return next();
+    res.set('Connection', 'close');
+    next(new HttpError(503, serviceUnavailable));
+  });
   app.use(express.json({ limit: '64kb' }));
   app.use('/api', rateLimit({ windowMs: 60000, limit: 300, standardHeaders: 'draft-8', legacyHeaders: false, message: { error: 'Too many requests. Please try again shortly.' } }));
-  app.get('/api/health', async (_req, res) => { await pool.query('SELECT 1'); res.json({ status: 'ok', database: 'postgresql' }); });
+  const destinationPrefix = '/api/v1/destinations';
+  app.use(destinationPrefix, (_req, res, next) => {
+    res.locals.requestRoutePrefix = destinationPrefix;
+    next();
+  }, createDestinationsRouter(pool));
+  app.get('/api/health', async (_req, res) => { await checkDatabase(); res.json({ status: 'ok', database: 'postgresql' }); });
+  app.get('/api/live', (_req, res) => res.set('Cache-Control', 'no-store').json({ status: 'ok' }));
+  app.get('/api/ready', async (_req, res) => {
+    res.set('Cache-Control', 'no-store');
+    await checkDatabase();
+    res.json({ status: 'ok', database: 'postgresql' });
+  });
   app.get('/api/events', (req, res, next) => {
     res.vary('Accept');
     // Regular catalog requests expect JSON. Live clients explicitly request SSE.
     if (req.accepts(['json', 'text/event-stream']) !== 'text/event-stream') return next();
+    if (hub.isShuttingDown) throw new HttpError(503, serviceUnavailable);
     if (hub.listenerCount('change') >= 100) throw new HttpError(503, 'Too many live connections.');
     res.set({ 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache, no-transform', 'Connection': 'keep-alive', 'X-Accel-Buffering': 'no' });
     res.flushHeaders();
-    const send = (data: object) => { if (!res.destroyed && !res.write(`data: ${JSON.stringify(data)}\n\n`)) res.end(); };
-    const changed = (table: string) => send({ table });
-    const ready = () => send({ type: 'ready' });
-    const offline = () => send({ type: 'reconnecting' });
-    hub.on('change', changed); hub.on('ready', ready); hub.on('offline', offline);
+    const send = (frame: string) => {
+      if (!res.destroyed && !res.writableEnded && !res.write(frame)) res.end();
+    };
+    const changed = (table: string) => send(sseFrame({ table }));
+    const ready = () => send(sseFrame({ type: 'ready' }));
+    const offline = () => send(reconnectingFrame);
+    const heartbeat = setInterval(() => send(sseFrame({ type: 'heartbeat' })), 15000);
+    function cleanup() {
+      clearInterval(heartbeat);
+      hub.off('change', changed);
+      hub.off('ready', ready);
+      hub.off('offline', offline);
+      hub.off('shutdown', shutdown);
+    }
+    function shutdown() {
+      cleanup();
+      if (res.destroyed || res.writableEnded) return;
+      const socket = res.socket;
+      res.end(reconnectingFrame, () => socket?.end());
+    }
+    hub.on('change', changed);
+    hub.on('ready', ready);
+    hub.on('offline', offline);
+    hub.on('shutdown', shutdown);
+    res.once('close', cleanup);
     ready();
-    const heartbeat = setInterval(() => send({ type: 'heartbeat' }), 15000);
-    req.on('close', () => { clearInterval(heartbeat); hub.off('change', changed); hub.off('ready', ready); hub.off('offline', offline); });
   });
   app.use('/api/auth', rateLimit({ windowMs: 60000, limit: 30, standardHeaders: 'draft-8', legacyHeaders: false, message: { error: 'Too many sign-in attempts. Try again in a minute.' } }));
   const issueSession = async (user: User, res: Response, status = 200) => {
@@ -127,12 +173,16 @@ export function createApp(pool: pg.Pool, hub: EventHub, origins: string[]) {
   app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
     if (error instanceof z.ZodError) { res.status(400).json({ error: error.issues.map(issue => `${issue.path.join('.')}: ${issue.message}`).join('; ') }); return; }
     if (error instanceof HttpError) { res.status(error.status).json({ error: error.message }); return; }
+    if (error instanceof URIError && (error as { status?: number }).status === 400) {
+      res.status(400).json({ error: 'Invalid request path.' });
+      return;
+    }
     const code = (error as { code?: string }).code;
     if (code === '23505') { res.status(409).json({ error: 'This entry already exists.' }); return; }
     if (error instanceof SyntaxError) { res.status(400).json({ error: 'Invalid JSON body.' }); return; }
     if ((error as { status?: number }).status === 413) { res.status(413).json({ error: 'Request is too large.' }); return; }
-    console.error('API request failed:', code ?? (error instanceof Error ? error.name : 'unknown'));
-    res.status(503).json({ error: 'Service is unavailable. Please try again.' });
+    if (typeof code === 'string' && /^[0-9A-Z]{5}$/.test(code)) res.locals.databaseErrorCode = code;
+    res.status(503).json({ error: serviceUnavailable });
   });
   return app;
 }

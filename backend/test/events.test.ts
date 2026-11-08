@@ -51,7 +51,12 @@ it('delivers committed PostgreSQL changes to two SSE clients without exposing co
     expect(received).toEqual(['places']); hub.off('change', listener);
     hub.emit('offline');
     for (const reader of readers) expect(new TextDecoder().decode((await reader.read()).value)).toContain('reconnecting');
-  } finally { abort.abort(); await pool.query('DELETE FROM phrases WHERE id=$1', [inserted.rows[0].id]); }
+  } finally {
+    abort.abort();
+    // Drain the committed cleanup event before the rollback test begins.
+    const cleanupChange = once(hub, 'change', { signal: AbortSignal.timeout(2000) });
+    await Promise.all([pool.query('DELETE FROM phrases WHERE id=$1', [inserted.rows[0].id]), cleanupChange]);
+  }
 });
 it('does not notify rolled-back writes', async () => {
   const client = await pool.connect(); const received: string[] = [];

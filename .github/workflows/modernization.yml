@@ -1,0 +1,95 @@
+name: Hanoi Guide checks
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/modernization.yml'
+      - 'backend/**'
+      - 'hanoi-guide-contracts/**'
+      - 'hanoi-guide-web/**'
+      - 'hanoi-guide-mobile/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hanoi-guide-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:18.1
+        env:
+          POSTGRES_DB: hanoi_modernization_verify_ci
+          POSTGRES_USER: ci
+          POSTGRES_PASSWORD: ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U ci -d hanoi_modernization_verify_ci"
+          --health-interval 5s --health-timeout 3s --health-retries 10
+    env:
+      DATABASE_URL: postgresql://ci:ci@127.0.0.1:5432/hanoi_modernization_verify_ci
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+      - run: node hanoi-guide-contracts/generate.mjs --check
+      - working-directory: backend
+        run: |
+          npm ci
+          npm run build
+          npm run migrate
+          npm test
+
+  web:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: hanoi-guide-web/package-lock.json
+      - working-directory: hanoi-guide-web
+        run: |
+          npm ci
+          npm run contract:check
+          npm run lint
+          npm run typecheck
+          npm run build
+          npx playwright install --with-deps chromium
+          npm run test:e2e
+
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6
+        with:
+          java-version: 17
+          distribution: temurin
+      - run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Check Kotlin contract copy
+        run: >-
+          git diff --no-index --ignore-cr-at-eol --
+          hanoi-guide-contracts/generated-kotlin/Destinations.kt
+          hanoi-guide-mobile/shared/src/commonMain/kotlin/com/hanoiguide/contracts/Destinations.kt
+      - working-directory: hanoi-guide-mobile
+        run: bash ./gradlew --no-daemon :shared:testAndroidHostTest :androidApp:assembleDebug

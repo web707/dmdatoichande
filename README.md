@@ -2,6 +2,20 @@
 
 Prototype hướng dẫn du lịch Hà Nội cho khách nước ngoài. Một codebase Flutter chạy trên Android và Web; API Node.js/TypeScript và PostgreSQL local là nguồn dữ liệu chung.
 
+Bản chuyển đổi chạy song song với Flutter. Next.js và Android KMP đã có luồng đọc danh sách điểm đến qua API v1. Xem [hướng dẫn chạy trên Windows](docs/13_DEPLOYMENT_GUIDE.md) và [tiến độ đối chiếu chức năng](docs/migration/FEATURE_PARITY_MATRIX.md).
+
+## Chạy Next.js và Android KMP cùng lúc
+
+Từ thư mục dự án, mở **Git Bash** trên Windows và chạy:
+
+```bash
+./dev.sh
+```
+
+- Mở [Web ở cổng 1503](http://127.0.0.1:1503/destinations). Script dùng API cổng 8090 và PostgreSQL đã thiết lập cho dự án.
+- Script khởi động nguội AVD `Hanoi_VR360_API_34` mà không nạp hoặc lưu snapshot, rồi cài và mở bản debug. Nếu dùng AVD khác, đặt `HANOI_ANDROID_AVD` trước khi chạy.
+- Nhấn `Ctrl+C` để kết thúc phiên. PostgreSQL và API đã chạy sẵn vẫn có thể dùng tiếp. Log của phiên nằm trong `.local/dev/`.
+
 ## Chức năng
 
 - **Explore**: địa điểm, ảnh, lịch sử/văn hoá tiếng Anh, chi tiết và marker bản đồ.
@@ -12,10 +26,10 @@ Prototype hướng dẫn du lịch Hà Nội cho khách nước ngoài. Một co
 
 ## Khởi động nhanh trên máy hiện tại
 
-Source: `D:\App_HUBT\hanoi_travel_guide`. Dùng PowerShell 7, Node.js 24, Flutter stable và PostgreSQL 18 đã cài.
+Source: `D:\App_HUBT`. Dùng PowerShell 7, Node.js 24, Flutter stable và PostgreSQL 18 đã cài.
 
 ```powershell
-Set-Location D:\App_HUBT\hanoi_travel_guide
+Set-Location D:\App_HUBT
 .\scripts\set-env.ps1
 .\scripts\setup-local.ps1
 Set-Location backend
@@ -40,14 +54,14 @@ Nếu cần chỉ định PostgreSQL đã cài ở nơi khác:
 Terminal Web:
 
 ```powershell
-Set-Location D:\App_HUBT\hanoi_travel_guide
+Set-Location D:\App_HUBT
 .\scripts\run-web.ps1
 ```
 
 Terminal Emulator/Mobile:
 
 ```powershell
-Set-Location D:\App_HUBT\hanoi_travel_guide
+Set-Location D:\App_HUBT
 flutter emulators --launch Medium_Phone_API_35
 flutter devices
 .\scripts\run-mobile.ps1 -DeviceId emulator-5554
@@ -76,7 +90,7 @@ Mở `http://localhost:8090/`. API phục vụ thư mục `build/web`. Router d�
 | `PUB_CACHE` | `D:\android-tools\pub-cache` |
 | `GRADLE_USER_HOME` | `D:\android-tools\gradle-home` |
 | `ANDROID_AVD_HOME` | `D:\android-tools\avd` |
-| PostgreSQL data | `D:\App_HUBT\hanoi_travel_guide\.local\pgdata` |
+| PostgreSQL data | `D:\App_HUBT\.local\pgdata` |
 | npm cache | `D:\android-tools\npm-cache` |
 
 `set-env.ps1` đặt biến cho terminal hiện tại và user; mở lại các terminal/IDE khác để nhận biến mới. Script không tự di chuyển cache hay máy ảo cũ. Binaries PostgreSQL dùng bản hệ thống đã cài, còn dữ liệu dự án ở D.
@@ -166,4 +180,4 @@ Seed gồm Hồ Hoàn Kiếm, Văn Miếu, Phở Gia Truyền 49 Bát Đàn, Bú
 - Hai Admin sửa cùng nội dung theo cơ chế lần ghi cuối thắng; chưa có lịch sử phiên bản/khôi phục trong UI.
 - Flutter Web build JavaScript/CanvasKit. `flutter_tts` hiện có cảnh báo kiểm tra tương thích WASM; không bật `--wasm` cho bản này.
 
-Để dừng database riêng: dùng `pg_ctl -D D:\App_HUBT\hanoi_travel_guide\.local\pgdata stop -m fast`. Không xoá `.local/pgdata` để “reset” nếu cần giữ dữ liệu; backup bằng `pg_dump` trước các thay đổi phá huỷ. Migrations có bảng theo dõi và chạy trong transaction.
+Để dừng database riêng: dùng `pg_ctl -D D:\App_HUBT\.local\pgdata stop -m fast`. Không xoá `.local/pgdata` để “reset” nếu cần giữ dữ liệu; backup bằng `pg_dump` trước các thay đổi phá huỷ. Migrations có bảng theo dõi và chạy trong transaction.

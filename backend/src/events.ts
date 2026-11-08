@@ -3,8 +3,15 @@ import pg from 'pg';
 import { collections } from './validation.js';
 
 export class EventHub extends EventEmitter {
+  #shuttingDown = false;
   constructor() { super(); this.setMaxListeners(200); }
+  get isShuttingDown() { return this.#shuttingDown; }
   publish(table: string) { if (collections.includes(table as typeof collections[number])) this.emit('change', table); }
+  closeStreams() {
+    if (this.#shuttingDown) return;
+    this.#shuttingDown = true;
+    this.emit('shutdown');
+  }
 }
 
 // LISTEN uses its own connection; trigger notifications arrive only after COMMIT.

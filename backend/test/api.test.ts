@@ -15,7 +15,7 @@ const emails = [`admin-${tag}@test.local`, `alice-${tag}@test.local`, `bob-${tag
 let admin = ''; let alice = ''; let bob = '';
 let phraseId = ''; let placeId = ''; let foodId = '';
 const phrase = { vietnamese_text: `Xin chào ${tag}`, english_meaning: 'Hello', pronunciation_guide: 'sin chow (approximate)', category: 'greetings' };
-const place = { name_vi: `Test ${tag}`, name_en: `Test ${tag}`, summary_en: 'Summary', history_en: 'History', culture_en: 'Culture', image_url: 'https://example.org/lake.jpg', image_credit: 'Test fixture', address: 'Hanoi', latitude: 21.03, longitude: 105.85 };
+const place = { name_vi: `ĐỐNG ĐA ${tag}`, name_en: `Test ${tag}`, summary_en: 'Summary', history_en: 'History', culture_en: 'Culture', image_url: 'https://example.org/lake.jpg', image_credit: 'Test fixture', address: `Số 8, ngõ   Đặng\tTiến Đông, ${tag}`, latitude: 21.03, longitude: 105.85 };
 describe('real PostgreSQL API permissions and CRUD', () => {
   beforeAll(async () => {
     await pool.query('INSERT INTO users(email,password_hash,role) VALUES($1,$2,$3)', [emails[0], await hashPassword('Test-password-123!'), 'admin']);
@@ -57,6 +57,48 @@ describe('real PostgreSQL API permissions and CRUD', () => {
     const edited = await request(app).put(`/api/places/${placeId}`).auth(admin, { type: 'bearer' }).send({ ...place, latitude: 21.04 });
     expect(edited.status).toBe(200); expect(edited.body.latitude).toBe(21.04);
     expect((await request(app).get('/api/places')).body.some((p: {id: string}) => p.id === placeId)).toBe(true);
+  });
+  it('reads the same newly edited destination through the v1 contract', async () => {
+    const page = await request(app).get('/api/v1/destinations').query({ limit: 1, q: place.name_en.toUpperCase() });
+    expect(page.status).toBe(200);
+    expect(page.body).toEqual({
+      items: [{
+        id: placeId, nameVi: place.name_vi, nameEn: place.name_en, summaryEn: place.summary_en,
+        imageUrl: place.image_url, imageCredit: place.image_credit, address: place.address,
+      }],
+      nextCursor: null,
+    });
+    const literal = await request(app).get('/api/v1/destinations').query({ q: `%${place.name_en}%` });
+    expect(literal.body).toEqual({ items: [], nextCursor: null });
+  });
+  it('reads visit and map fields by destination ID without changing the legacy shape', async () => {
+    const response = await request(app).get(`/api/v1/destinations/${placeId}`);
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({
+      id: placeId, nameVi: place.name_vi, nameEn: place.name_en, summaryEn: place.summary_en,
+      imageUrl: place.image_url, imageCredit: place.image_credit, address: place.address,
+      historyEn: place.history_en, cultureEn: place.culture_en, latitude: 21.04, longitude: place.longitude,
+      sourceUrl: '', openingHours: '', ticketPriceVnd: 0, ticketPriceUsd: '0.00',
+      bookingInfo: '', visitDurationMin: 0, bestTimeToVisit: '',
+    });
+    const conditional = await request(app).get(`/api/v1/destinations/${placeId}`)
+      .set('If-None-Match', response.headers.etag);
+    expect(conditional.status).toBe(304);
+    expect((await request(app).get('/api/v1/destinations/invalid-id')).status).toBe(400);
+    const missing = await request(app).get(`/api/v1/destinations/${randomUUID()}`);
+    expect(missing.status).toBe(404);
+    expect(missing.body).toEqual({ error: 'Destination not found.' });
+  });
+  it.each([
+    `   dong   da ${tag} `,
+    `ĐỐNG ĐA ${tag.toUpperCase()}`.normalize('NFD'),
+    `NGÕ ĐẶNG    TIẾN Đông, ${tag}`,
+    `ngo dang tien dong, ${tag}`,
+  ])('matches normalized names and addresses for %s', async q => {
+    const page = await request(app).get('/api/v1/destinations').query({ q });
+    expect(page.status).toBe(200);
+    expect(page.body.items.map((item: { id: string }) => item.id)).toEqual([placeId]);
+    expect(page.body.nextCursor).toBeNull();
   });
   it('isolates private phrases and prevents ownership spoofing', async () => {
     const created = await request(app).post('/api/phrases').auth(alice, { type: 'bearer' }).send(phrase);
