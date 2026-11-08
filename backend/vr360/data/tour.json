@@ -1,0 +1,1036 @@
+{
+  "firstScene": "9861",
+  "scenes": [
+    {
+      "id": "9861",
+      "title": "Hồ Gươm trên cao",
+      "panorama": "data/assets/scene-9861-57c459d7304391c8.webp",
+      "preview": "data/assets/preview-9861-0104293ad57cdcac.webp",
+      "pitch": -27,
+      "yaw": 2,
+      "hfov": 120,
+      "northOffset": 358,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9861.mp3",
+      "hotspots": [
+        {
+          "id": 18407,
+          "yaw": 3.74724,
+          "pitch": -65.1802,
+          "type": "marker",
+          "target": "9847",
+          "label": "Hồ Gươm",
+          "icon": "fas fa-circle-chevron-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18426,
+          "yaw": 57.9374,
+          "pitch": -9.5044,
+          "type": "marker",
+          "target": "9857",
+          "label": "Bắc Bộ Phủ",
+          "icon": "fas fa-circle",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18427,
+          "yaw": -151.968,
+          "pitch": -28.9976,
+          "type": "marker",
+          "target": "9851",
+          "label": "Báo Nhân Dân",
+          "icon": "fas fa-circle",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18428,
+          "yaw": 176.044,
+          "pitch": -31.7788,
+          "type": "marker",
+          "target": "9853",
+          "label": "Đình Nam Hương",
+          "icon": "fas fa-circle",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18429,
+          "yaw": -177.049,
+          "pitch": -45.8294,
+          "type": "marker",
+          "target": "9855",
+          "label": "Đền vua Lê Thái Tổ",
+          "icon": "fas fa-circle",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18430,
+          "yaw": 74.4526,
+          "pitch": -11.6233,
+          "type": "marker",
+          "target": "9856",
+          "label": "Bưu điện Hà Nội",
+          "icon": "fas fa-circle",
+          "targetPitch": 14,
+          "targetYaw": -5
+        },
+        {
+          "id": 18431,
+          "yaw": 61.387,
+          "pitch": -18.7261,
+          "type": "marker",
+          "target": "9858",
+          "label": "Vườn hoa Lý Thái Tổ",
+          "icon": "fas fa-circle",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18432,
+          "yaw": 40.3743,
+          "pitch": -14.5499,
+          "type": "marker",
+          "target": "9859",
+          "label": "UBND TP Hà Nội",
+          "icon": "fas fa-circle",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18433,
+          "yaw": -64.5528,
+          "pitch": -29.0193,
+          "type": "marker",
+          "target": "9848",
+          "label": "Đền Ngọc Sơn",
+          "icon": "fas fa-circle",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18434,
+          "yaw": -31.0198,
+          "pitch": -19.2274,
+          "type": "marker",
+          "target": "9850",
+          "label": "Tượng đài cảm tử",
+          "icon": "fas fa-circle",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18435,
+          "yaw": -40.1528,
+          "pitch": -18.5448,
+          "type": "marker",
+          "target": "9849",
+          "label": "Đền Bà Kiệu",
+          "icon": "fas fa-circle",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4286,
+          "yaw": 2.74113,
+          "pitch": -57.1216,
+          "type": "video",
+          "url": "data/assets/video-4286-54f2efc4b9357cda.mp4"
+        }
+      ],
+      "titleVi": "Hồ Gươm trên cao",
+      "titleEn": "Panoramic Aerial View",
+      "textVi": "Chào mừng quý khách đến với Hồ Hoàn Kiếm - trái tim xanh ngàn năm tuổi của Thủ đô Hà Nội. Chiêm ngưỡng từ trên cao vẻ đẹp thơ mộng, Tháp Rùa cổ kính và nhịp sống của vùng đất kinh kỳ nghìn năm văn hiến.",
+      "textEn": "Welcome to Hoan Kiem Lake, the thousand-year-old emerald heart of Hanoi. From this panoramic vantage point, explore the serene waters, the ancient Turtle Tower, and the timeless harmony between storied heritage and contemporary Vietnamese life.",
+      "audioVi": "data/assets/audio-9861.mp3",
+      "audioEn": "data/assets/audio-en-9861.mp3"
+    },
+    {
+      "id": "9847",
+      "title": "Hồ Gươm",
+      "panorama": "data/assets/scene-9847-cf3ff93117dad87c.webp",
+      "preview": "data/assets/preview-9847-b17a29c9a48fb55e.webp",
+      "pitch": 11,
+      "yaw": 157,
+      "hfov": 120,
+      "northOffset": 203,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9847-38008ec3b6d27c28.mp3",
+      "hotspots": [
+        {
+          "id": 18370,
+          "yaw": -10.3441,
+          "pitch": -21.7663,
+          "type": "marker",
+          "target": "9858",
+          "label": "Vườn hoa Lý Thái Tổ",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18408,
+          "yaw": 161.292,
+          "pitch": -18.7301,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4244,
+          "yaw": 159.476,
+          "pitch": -2.11616,
+          "type": "image",
+          "url": "data/assets/info-4244-fef51a78c2a9bd4e.webp"
+        }
+      ],
+      "titleVi": "Hồ Gươm",
+      "titleEn": "Hoan Kiem Lake",
+      "textVi": "Hồ Hoàn Kiếm còn được gọi là Hồ Gươm - trái tim xanh ngàn năm tuổi của thủ đô. Nhìn ra giữa lòng hồ, nơi ngọn Tháp Rùa cổ kính đang đứng trầm mặc, chúng ta như đang ngược dòng thời gian về với thế kỷ XV. Nơi đây gắn liền với truyền thuyết vua Lê Lợi hoàn gươm thần Thuận Thiên cho Rùa Vàng. Từng mang những cái tên như Lục Thủy, Thủy Quân, hay Tả Vọng, mặt nước rộng 12 héc-ta này là nơi lưu giữ trọn vẹn hồn thiêng sông núi và nhịp sống của mảnh đất kinh kỳ.",
+      "textEn": "Hoan Kiem Lake, also affectionately known as the Lake of the Restored Sword, is the vibrant green heart of Hanoi. Gazing out toward Turtle Tower standing serenely in the mist, we journey back to the fifteenth century, steeped in the legend of Emperor Le Loi returning the divine sword to the Golden Turtle God. Once known as Luc Thuy, Thuy Quan, or Ta Vong, this twelve-hectare historic lake preserves the sacred soul and daily rhythm of Vietnam's ancient capital.",
+      "audioVi": "data/assets/audio-9847-38008ec3b6d27c28.mp3",
+      "audioEn": "data/assets/audio-en-9847.mp3"
+    },
+    {
+      "id": "9848",
+      "title": "Đền Ngọc Sơn",
+      "panorama": "data/assets/scene-9848-dc5dbeb80eafeb48.webp",
+      "preview": "data/assets/preview-9848-d049833475259e4b.webp",
+      "pitch": 4,
+      "yaw": -2,
+      "hfov": 120,
+      "northOffset": 2,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9848-f5d20c345678b5e8.mp3",
+      "hotspots": [
+        {
+          "id": 18371,
+          "yaw": -2.31106,
+          "pitch": -25.2338,
+          "type": "marker",
+          "target": "9860",
+          "label": "Cầu Thê Húc",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18391,
+          "yaw": 111.172,
+          "pitch": -22.7967,
+          "type": "marker",
+          "target": "9850",
+          "label": "Tượng đài cảm tử",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18392,
+          "yaw": 75.3063,
+          "pitch": -18.3636,
+          "type": "marker",
+          "target": "9849",
+          "label": "Đền Bà Kiệu",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18410,
+          "yaw": -2.9503,
+          "pitch": -35.6004,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4245,
+          "yaw": -31.9227,
+          "pitch": 26.0652,
+          "type": "image",
+          "url": "data/assets/info-4245-77762d71fe041b7c.webp"
+        },
+        {
+          "id": 4270,
+          "yaw": -2.52574,
+          "pitch": 2.35227,
+          "type": "video",
+          "url": "data/assets/video-4270-01a66f540470eb3c.mp4"
+        }
+      ],
+      "titleVi": "Đền Ngọc Sơn",
+      "titleEn": "Ngoc Son Temple",
+      "textVi": "Nằm trên đảo Ngọc giữa Hồ Hoàn Kiếm, đền Ngọc Sơn là một trong những biểu tượng văn hóa – lịch sử tiêu biểu của Thủ đô. Qua thời gian, nơi đây lưu giữ nhiều lớp giá trị tín ngưỡng, lịch sử và văn hóa Thăng Long. Từ cổng đền, một trục kiến trúc nối tiếp mở ra: Tháp Bút, Đài Nghiên, cầu Thê Húc, Đắc Nguyệt Lâu và đình Trấn Ba, tạo nên một quần thể hài hòa. Di tích Hồ Hoàn Kiếm - đền Ngọc Sơn đã được xếp hạng Di tích quốc gia đặc biệt năm 2013.",
+      "textEn": "Perched gracefully upon Jade Island in Hoan Kiem Lake, Ngoc Son Temple is one of Hanoi’s most revered cultural and spiritual sanctuaries. Over the centuries, it has embraced multiple layers of Taoist, Confucian, and Buddhist heritage. From the temple gate, an exquisite architectural ensemble unfolds: Pen Tower, Ink Slab, The Huc Bridge, Moon Contemplation Pavilion, and Tran Ba Pavilion. Ngoc Son Temple was designated a Special National Monument in 2013.",
+      "audioVi": "data/assets/audio-9848-f5d20c345678b5e8.mp3",
+      "audioEn": "data/assets/audio-en-9848.mp3"
+    },
+    {
+      "id": "9849",
+      "title": "Đền Bà Kiệu",
+      "panorama": "data/assets/scene-9849-7b00ea1350a4691e.webp",
+      "preview": "data/assets/preview-9849-b69b74ccaffb8cbf.webp",
+      "pitch": 14,
+      "yaw": -176,
+      "hfov": 120,
+      "northOffset": 172,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9849-13e69817f5f09ae9.mp3",
+      "hotspots": [
+        {
+          "id": 18393,
+          "yaw": -145.882,
+          "pitch": -19.3794,
+          "type": "marker",
+          "target": "9848",
+          "label": "Đền Ngọc Sơn",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18394,
+          "yaw": 147.877,
+          "pitch": -17.6584,
+          "type": "marker",
+          "target": "9851",
+          "label": "Báo Nhân Dân",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18411,
+          "yaw": -177.956,
+          "pitch": -24.8129,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4257,
+          "yaw": 2.72647,
+          "pitch": 6.00598,
+          "type": "image",
+          "url": "data/assets/info-4257-d76bcf2d4d484228.webp"
+        },
+        {
+          "id": 4264,
+          "yaw": -178.277,
+          "pitch": 0.440428,
+          "type": "link",
+          "url": "https://ltq11-ta.github.io/denbakieu/index_before_after.html"
+        }
+      ],
+      "titleVi": "Đền Bà Kiệu",
+      "titleEn": "Ba Kieu Temple",
+      "textVi": "Nằm trên phố Đinh Tiên Hoàng, là một trong những ngôi đền cổ gắn với tín ngưỡng thờ Mẫu ở Hà Nội. Được xây dựng vào đầu thế kỷ XVII, dưới niên hiệu Vĩnh Tộ (1619 - 1628) thời vua Lê Thần Tông. Đền Thờ Thánh Mẫu Liễu Hạnh cùng hai vị tiên nữ Quỳnh Hoa và Quế Nương. Điểm độc đáo của đền là kiến trúc bị \"cắt đôi\" bởi con đường Đinh Tiên Hoàng, với Tam quan nằm sát bờ hồ. Năm 1994, đền được xếp hạng Di tích lịch sử – văn hóa cấp quốc gia. Kiến trúc đền mang đậm phong cách thời Nguyễn với các chi tiết chạm khắc tinh xảo, sơn son thếp vàng, tạo nên diện mạo nghệ thuật đặc trưng của không gian thờ tự thời Nguyễn.",
+      "textEn": "Located along Dinh Tiên Hoang Street, Ba Kieu Temple is one of Hanoi's oldest shrines dedicated to the indigenous Mother Goddess faith. Built in the early seventeenth century during the reign of King Le Than Tong, it honors Holy Mother Lieu Hanh alongside fairy attendants Quynh Hoa and Que Nuong. Uniquely, the temple's ceremonial gate and main sanctuary were physically separated by modern road construction, with the gate standing proudly on the lakeside. Celebrated for its intricate Nguyen dynasty wood carvings and gilded lacquering, it was recognized as a National Cultural and Historical Monument in 1994.",
+      "audioVi": "data/assets/audio-9849-13e69817f5f09ae9.mp3",
+      "audioEn": "data/assets/audio-en-9849.mp3"
+    },
+    {
+      "id": "9850",
+      "title": "Tượng đài cảm tử",
+      "panorama": "data/assets/scene-9850-b53ccd77d1ddb494.webp",
+      "preview": "data/assets/preview-9850-6f1655a8a7ad0e35.webp",
+      "pitch": 8,
+      "yaw": -5,
+      "hfov": 120,
+      "northOffset": 5,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9850-c497f104ca29faf7.mp3",
+      "hotspots": [
+        {
+          "id": 18372,
+          "yaw": -177.087,
+          "pitch": -14.1597,
+          "type": "marker",
+          "target": "9859",
+          "label": "UBND TP Hà Nội",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18396,
+          "yaw": -37.6259,
+          "pitch": -23.3716,
+          "type": "marker",
+          "target": "9848",
+          "label": "Đền Ngọc Sơn",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18412,
+          "yaw": -3.77118,
+          "pitch": -24.9693,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4247,
+          "yaw": -5.15922,
+          "pitch": 7.53837,
+          "type": "link",
+          "url": "https://ltq11-ta.github.io/tuongdaiquyettu/"
+        }
+      ],
+      "titleVi": "Tượng đài cảm tử",
+      "titleEn": "Martyrs Monument",
+      "textVi": "Nằm trong khuôn viên di tích đền Bà Kiệu, hướng mặt ra phố Đinh Tiên Hoàng và Hồ Gươm lịch sử, tượng đài Cảm tử từ lâu đã trở thành một biểu tượng tinh thần vô giá của Thủ đô. Tượng đài Cảm tử được xây dựng năm 1984, nhân kỷ niệm 30 năm Ngày Giải phóng Thủ đô. Tên công trình được lấy từ câu nói trong thư của Chủ tịch Hồ Chí Minh. Lời thề \"Quyết tử để Tổ quốc quyết sinh\" bác Hồ gửi tặng các chiến sĩ Trung đoàn Thủ đô nhân dịp Tết Đinh Hợi (1947).",
+      "textEn": "Set within the courtyard of Ba Kieu Temple facing Hoan Kiem Lake, the Martyrs Monument is a poignant tribute to Hanoi's heroic past. Unveiled in 1984 to mark the 30th anniversary of Capital Liberation Day, the monument immortalizes President Ho Chi Minh’s historic commendation to the Capital Regiment during the 1947 resistance: 'Determined to brave death so that the Fatherland may live'.",
+      "audioVi": "data/assets/audio-9850-c497f104ca29faf7.mp3",
+      "audioEn": "data/assets/audio-en-9850.mp3"
+    },
+    {
+      "id": "9851",
+      "title": "Báo Nhân Dân",
+      "panorama": "data/assets/scene-9851-1b4beeb378ba496b.webp",
+      "preview": "data/assets/preview-9851-a1383b1b7321768d.webp",
+      "pitch": 2,
+      "yaw": -1,
+      "hfov": 120,
+      "northOffset": 1,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9851-44c08c815aa36334.mp3",
+      "hotspots": [
+        {
+          "id": 18374,
+          "yaw": -3.66645,
+          "pitch": -22.4018,
+          "type": "marker",
+          "target": "9852",
+          "label": "Cây đa Nhân Dân",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18376,
+          "yaw": 102.417,
+          "pitch": -32.7717,
+          "type": "marker",
+          "target": "9853",
+          "label": "Đình Nam Hương",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18377,
+          "yaw": -98.4417,
+          "pitch": -22.9166,
+          "type": "marker",
+          "target": "9848",
+          "label": "Đền Ngọc Sơn",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18414,
+          "yaw": -4.8261,
+          "pitch": -35.3498,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        }
+      ],
+      "titleVi": "Báo Nhân Dân",
+      "titleEn": "Nhan Dan Newspaper Headquarters",
+      "textVi": "Tọa lạc tại số 71 phố Hàng Trống, Hà Nội, trụ sở Báo Nhân Dân là nơi gắn bó với nhiều dấu mốc trong lịch sử báo chí cách mạng Việt Nam. Sau ngày giải phóng Thủ đô năm 1954, Báo Nhân Dân chuyển trụ sở về đây. Bên trong khuôn viên tòa soạn có một cây đa cổ thụ lâu năm, góp phần tạo nên nét đặc trưng cho không gian nơi này.",
+      "textEn": "Situated at 71 Hang Trong Street, the headquarters of Nhan Dan Newspaper has long been intertwined with milestones of Vietnamese revolutionary journalism. Establishing its headquarters here following the 1954 liberation of Hanoi, the compound features grand French-era colonial architecture centered around an iconic three-century-old banyan tree.",
+      "audioVi": "data/assets/audio-9851-44c08c815aa36334.mp3",
+      "audioEn": "data/assets/audio-en-9851.mp3"
+    },
+    {
+      "id": "9852",
+      "title": "Cây đa Nhân Dân",
+      "panorama": "data/assets/scene-9852-e2e28d5c3d6441b8.webp",
+      "preview": "data/assets/preview-9852-5b2f264fcbfaeffa.webp",
+      "pitch": 29,
+      "yaw": -177,
+      "hfov": 120,
+      "northOffset": 177,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9852-917a06ae921237ec.mp3",
+      "hotspots": [
+        {
+          "id": 18375,
+          "yaw": 14.0239,
+          "pitch": -23.8299,
+          "type": "marker",
+          "target": "9851",
+          "label": "Báo Nhân Dân",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18416,
+          "yaw": 177.935,
+          "pitch": -30.4405,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4266,
+          "yaw": -150.177,
+          "pitch": 12.6015,
+          "type": "link",
+          "url": "https://ltq11-ta.github.io/boxcayda/"
+        }
+      ],
+      "titleVi": "Cây đa Nhân Dân",
+      "titleEn": "The Historic Banyan Tree",
+      "textVi": "Trong khuôn viên có một cây đa cổ thụ đã hơn 300 năm tuổi. Trải qua nhiều năm, cây vẫn được gìn giữ, trở thành một phần quen thuộc của Báo Nhân Dân.",
+      "textEn": "Standing quietly within the courtyard is a magnificent heritage banyan tree over 300 years old. Having witnessed centuries of city history, its spreading canopy remains a beloved green icon of Hanoi's historic Old Quarter.",
+      "audioVi": "data/assets/audio-9852-917a06ae921237ec.mp3",
+      "audioEn": "data/assets/audio-en-9852.mp3"
+    },
+    {
+      "id": "9853",
+      "title": "Đình Nam Hương",
+      "panorama": "data/assets/scene-9853-1bda02ba0262c953.webp",
+      "preview": "data/assets/preview-9853-6a103bf0cf8d203f.webp",
+      "pitch": -1,
+      "yaw": -2,
+      "hfov": 120,
+      "northOffset": 2,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9853-ef2e2a6224156452.mp3",
+      "hotspots": [
+        {
+          "id": 18378,
+          "yaw": 45.6356,
+          "pitch": -40.2565,
+          "type": "marker",
+          "target": "9855",
+          "label": "Đền vua Lê Thái Tổ",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18379,
+          "yaw": -47.5877,
+          "pitch": -39.8738,
+          "type": "marker",
+          "target": "9851",
+          "label": "Báo Nhân Dân",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18417,
+          "yaw": 0.571791,
+          "pitch": -38.8411,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4249,
+          "yaw": -2.13681,
+          "pitch": -1.02629,
+          "type": "image",
+          "url": "data/assets/info-4249-f60be04791bdbb66.webp"
+        },
+        {
+          "id": 4285,
+          "yaw": -2.35091,
+          "pitch": 22.7032,
+          "type": "image",
+          "url": "data/assets/info-4285-0a08a3be5dd91532.webp"
+        }
+      ],
+      "titleVi": "Đình Nam Hương",
+      "titleEn": "Nam Huong Communal House",
+      "textVi": "Nằm tại số 75 phố Hàng Trống, đình Nam Hương nằm phía sau khu tưởng niệm Vua Lê Thái Tổ. Nơi đây là một trong những khu vực lưu giữ dấu ấn lịch sử và văn hóa của Hà Nội và được xếp hạng Di tích lịch sử - văn hóa, kiến trúc nghệ thuật cấp Quốc gia vào năm 1995. Đình Nam Hương được dựng từ thời Lê để thờ các vị Thượng đẳng thần là: Thần Long Đỗ (thần Bạch Mã), thần Cao Sơn đại vương, thần Linh Lang đại vương, công chúa Á Duy và thần Kha Duy. Đặc biệt, đình là một trong những di tích hiếm hoi gắn với cả bốn vị thần trong hệ thống Thăng Long tứ trấn: Bạch Mã trấn phía Đông, Cao Sơn trấn phía Nam và Linh Lang trấn phía Tây.",
+      "textEn": "Located at 75 Hang Trong Street, Nam Huong Communal House is an esteemed sanctuary designated as a National Monument in 1995. Founded during the Le dynasty, it honors supreme guardian deities including Long Do (the White Horse God), Cao Son, and Linh Lang. Remarkably, it is one of the rare sites linked to three of the Four Sacred Guardian Spirits of ancient Thang Long.",
+      "audioVi": "data/assets/audio-9853-ef2e2a6224156452.mp3",
+      "audioEn": "data/assets/audio-en-9853.mp3"
+    },
+    {
+      "id": "9855",
+      "title": "Đền vua Lê Thái Tổ",
+      "panorama": "data/assets/scene-9855-05b09ae450a9be66.webp",
+      "preview": "data/assets/preview-9855-f1adc608d5611c47.webp",
+      "pitch": 1,
+      "yaw": -6,
+      "hfov": 120,
+      "northOffset": 6,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9855-901b7599d536c473.mp3",
+      "hotspots": [
+        {
+          "id": 18380,
+          "yaw": 173.329,
+          "pitch": -45.5623,
+          "type": "marker",
+          "target": "9856",
+          "label": "Bưu điện Hà Nội",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18419,
+          "yaw": -9.44844,
+          "pitch": -39.652,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4251,
+          "yaw": -52.5493,
+          "pitch": -1.99829,
+          "type": "image",
+          "url": "data/assets/info-4251-600013e0a869a142.webp"
+        },
+        {
+          "id": 4252,
+          "yaw": -43.7999,
+          "pitch": -1.39807,
+          "type": "image",
+          "url": "data/assets/info-4252-5ef9585fb847aa11.webp"
+        },
+        {
+          "id": 4253,
+          "yaw": 31.78,
+          "pitch": 0.929631,
+          "type": "image",
+          "url": "data/assets/info-4253-29bcd6dcfc125c47.webp"
+        },
+        {
+          "id": 4263,
+          "yaw": -8.01606,
+          "pitch": 0.962987,
+          "type": "link",
+          "url": "https://ltq11-ta.github.io/LETHAITO/"
+        }
+      ],
+      "titleVi": "Đền vua Lê Thái Tổ",
+      "titleEn": "King Le Thai To Memorial",
+      "textVi": "Tượng đài vua Lê Thái Tổ nằm trong một quần thể kiến trúc nhiều hạng mục tại số 16 phố Lê Thái Tổ. Quần thể kiến trúc tưởng niệm vua Lê do Kinh lược sứ Bắc Kỳ Hoàng Cao Khải dựng vào năm 1894, để tưởng nhớ công ơn vị vua đã đánh thắng giặc ngoại xâm, giành độc lập cho dân tộc. Quần thể gồm 3 hạng mục chính, bố cục đăng đối theo một trục thần đạo, từ ngoài vào trong là cổng, sân vườn, nhà phương đình và tượng đài.",
+      "textEn": "The King Le Thai To Memorial Complex at 16 Le Thai To Street was erected in 1894 by Viceroy Hoang Cao Khai to honor the national hero who triumphed over foreign invaders to reclaim independence in 1428. Arranged symmetrically along a ceremonial axis, it includes an ornate gateway, courtyard, pavilion, and a bronze statue of Emperor Le Loi brandishing the divine sword.",
+      "audioVi": "data/assets/audio-9855-901b7599d536c473.mp3",
+      "audioEn": "data/assets/audio-en-9855.mp3"
+    },
+    {
+      "id": "9856",
+      "title": "Bưu điện Hà Nội",
+      "panorama": "data/assets/scene-9856-0570ce8b24060b92.webp",
+      "preview": "data/assets/preview-9856-0d73f0f74d662d2d.webp",
+      "pitch": 14,
+      "yaw": -5,
+      "hfov": 120,
+      "northOffset": 5,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9856-c709b21d609a73f5.mp3",
+      "hotspots": [
+        {
+          "id": 18381,
+          "yaw": 47.6252,
+          "pitch": -20.997,
+          "type": "marker",
+          "target": "9855",
+          "label": "Đền vua Lê Thái Tổ",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18382,
+          "yaw": -35.5715,
+          "pitch": -32.2792,
+          "type": "marker",
+          "target": "9858",
+          "label": "Vườn hoa Lý Thái Tổ",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18418,
+          "yaw": 12.8403,
+          "pitch": -38.1466,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4259,
+          "yaw": -6.66543,
+          "pitch": 25.7738,
+          "type": "link",
+          "url": "https://ltq11-ta.github.io/buudienhanoi/"
+        }
+      ],
+      "titleVi": "Bưu điện Hà Nội",
+      "titleEn": "Hanoi Central Post Office",
+      "textVi": "Nằm bên Hồ Gươm thơ mộng, Bưu điện Hà Nội nổi bật với vẻ đẹp cổ kính, trang nghiêm, mang đậm dấu ấn kiến trúc Pháp. Công trình này không chỉ là nơi giao thương bưu chính quan trọng mà còn là biểu tượng văn hóa, lịch sử của Thủ đô Hà Nội.",
+      "textEn": "Gracing the eastern bank of Hoan Kiem Lake, the Hanoi Post Office is distinguished by its stately neoclassical architecture and iconic public clock tower. It stands not only as an essential postal gateway but also as an enduring witness to the city's modern cultural history.",
+      "audioVi": "data/assets/audio-9856-c709b21d609a73f5.mp3",
+      "audioEn": "data/assets/audio-en-9856.mp3"
+    },
+    {
+      "id": "9857",
+      "title": "Bắc Bộ Phủ",
+      "panorama": "data/assets/scene-9857-991671dff30e3d4e.webp",
+      "preview": "data/assets/preview-9857-708fcb0578916f91.webp",
+      "pitch": 2,
+      "yaw": 0,
+      "hfov": 120,
+      "northOffset": 360,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9857-88506367a2eb2610.mp3",
+      "hotspots": [
+        {
+          "id": 18383,
+          "yaw": 46.0748,
+          "pitch": -26.2507,
+          "type": "marker",
+          "target": "9858",
+          "label": "Vườn hoa Lý Thái Tổ",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18384,
+          "yaw": -45.0446,
+          "pitch": -23.9671,
+          "type": "marker",
+          "target": "9856",
+          "label": "Bưu điện Hà Nội",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18415,
+          "yaw": -0.440986,
+          "pitch": -28.6433,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4268,
+          "yaw": -0.229895,
+          "pitch": -0.814617,
+          "type": "link",
+          "url": "https://ltq11-ta.github.io/bacbophu/"
+        }
+      ],
+      "titleVi": "Bắc Bộ Phủ",
+      "titleEn": "Government Guest House (Bac Bo Phu)",
+      "textVi": "Bắc Bộ phủ, nay là Nhà khách Chính phủ tọa lạc 12 Ngô Quyền, là một di tích lịch sử - văn hóa quan trọng của Thủ đô Hà Nội. Đây là nơi ghi dấu cuộc Tổng khởi nghĩa giành chính quyền (19-8-1945) của nhân dân Thủ đô, cũng là nơi Chủ tịch Hồ Chí Minh từng sống, làm việc sau Cách mạng Tháng Tám cho đến ngày Toàn quốc kháng chiến. Ngày nay, Bắc Bộ phủ là một di tích - điểm đến quan trọng của thành phố Hà Nội.",
+      "textEn": "The Government Guest House, originally known as the Tonkin Governor's Palace (Bac Bo Phu), is a premier French colonial landmark at 12 Ngo Quyen Street. It bore witness to the August 19, 1945 uprising to seize power and served as President Ho Chi Minh's residence and office in the formative early months of the Democratic Republic of Vietnam.",
+      "audioVi": "data/assets/audio-9857-88506367a2eb2610.mp3",
+      "audioEn": "data/assets/audio-en-9857.mp3"
+    },
+    {
+      "id": "9858",
+      "title": "Vườn hoa Lý Thái Tổ",
+      "panorama": "data/assets/scene-9858-08dcdc5ae1d002c2.webp",
+      "preview": "data/assets/preview-9858-d0ccd70108a4ff01.webp",
+      "pitch": 6,
+      "yaw": 175,
+      "hfov": 120,
+      "northOffset": 185,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9858-0a41668ea5dccddd.mp3",
+      "hotspots": [
+        {
+          "id": 18386,
+          "yaw": -161.647,
+          "pitch": -25.6767,
+          "type": "marker",
+          "target": "9857",
+          "label": "Bắc Bộ Phủ",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18387,
+          "yaw": 150.664,
+          "pitch": -20.3957,
+          "type": "marker",
+          "target": "9859",
+          "label": "UBND TP Hà Nội",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18388,
+          "yaw": -43.0345,
+          "pitch": -15.1695,
+          "type": "marker",
+          "target": "9856",
+          "label": "Bưu điện Hà Nội",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18413,
+          "yaw": 175.173,
+          "pitch": -26.5269,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4262,
+          "yaw": 175.81,
+          "pitch": 21.0968,
+          "type": "link",
+          "url": "https://ltq11-ta.github.io/LYTHAITO/"
+        }
+      ],
+      "titleVi": "Vườn hoa Lý Thái Tổ",
+      "titleEn": "Ly Thai To Park",
+      "textVi": "Nằm bên hồ Hoàn Kiếm, giữa bốn tuyến phố Đinh Tiên Hoàng, Lê Lai, Lê Thạch và Ngô Quyền, vườn hoa Lý Thái Tổ là một trong những không gian công cộng quan trọng gắn liền với cảnh quan Hồ Gươm. Nổi bật tại đây là tượng đài vua Lý Thái Tổ, được khánh thành ngày 7/10/2004, do UBND thành phố Hà Nội thực hiện nhân dịp kỷ niệm 50 năm Ngày Giải phóng Thủ đô.",
+      "textEn": "Bordering Hoan Kiem Lake between four bustling streets, Ly Thai To Park is one of Hanoi’s most lively gathering places. At its focal point stands the imposing bronze monument of Emperor Ly Thai To, inaugurated in 2004, honoring the royal founder who established Thang Long—modern-day Hanoi—as the imperial capital in the year 1010.",
+      "audioVi": "data/assets/audio-9858-0a41668ea5dccddd.mp3",
+      "audioEn": "data/assets/audio-en-9858.mp3"
+    },
+    {
+      "id": "9859",
+      "title": "UBND TP Hà Nội",
+      "panorama": "data/assets/scene-9859-5e25a402f8f8d98f.webp",
+      "preview": "data/assets/preview-9859-71395ba338e92a23.webp",
+      "pitch": 4,
+      "yaw": -1,
+      "hfov": 120,
+      "northOffset": 1,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9859-5b3978bb0527448d.mp3",
+      "hotspots": [
+        {
+          "id": 18389,
+          "yaw": 42.4227,
+          "pitch": -25.1607,
+          "type": "marker",
+          "target": "9858",
+          "label": "Vườn hoa Lý Thái Tổ",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18390,
+          "yaw": -45.572,
+          "pitch": -24.6448,
+          "type": "marker",
+          "target": "9850",
+          "label": "Tượng đài cảm tử",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18409,
+          "yaw": -1.93287,
+          "pitch": -33.6398,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4260,
+          "yaw": -0.741987,
+          "pitch": 27.2818,
+          "type": "link",
+          "url": "https://ltq11-ta.github.io/UBNNquakhuvahientai/"
+        }
+      ],
+      "titleVi": "UBND TP Hà Nội",
+      "titleEn": "Hanoi City Hall",
+      "textVi": "Ủy ban nhân dân thành phố Hà Nội là cơ quan hành chính nhà nước nằm trong hệ thống hành chính Cộng hòa xã hội chủ nghĩa Việt Nam. Đây là cơ quan chấp hành của Hội đồng nhân dân thành phố Hà Nội, cơ quan hành chính nhà nước ở thành phố Hà Nội, chịu trách nhiệm trước Hội đồng nhân dân thành phố và cơ quan nhà nước ở Trung ương Nhà nước Việt Nam, chịu trách nhiệm chấp hành Hiến pháp Việt Nam, pháp luật, các văn bản của Chính phủ Việt Nam và các Nghị quyết của Hội đồng nhân dân thành phố.",
+      "textEn": "Hanoi City Hall, the seat of the Hanoi People’s Committee, overlooks Hoan Kiem Lake with dignified modern architecture. As the municipal executive government of the capital, it oversees civic administration, public services, and the flourishing development of this ancient metropolis.",
+      "audioVi": "data/assets/audio-9859-5b3978bb0527448d.mp3",
+      "audioEn": "data/assets/audio-en-9859.mp3"
+    },
+    {
+      "id": "9860",
+      "title": "Cầu Thê Húc",
+      "panorama": "data/assets/scene-9860-5c4bfe5fe4089342.webp",
+      "preview": "data/assets/preview-9860-5f91566ec3b2f4f5.webp",
+      "pitch": 0,
+      "yaw": 0,
+      "hfov": 120,
+      "northOffset": 0,
+      "fadeMs": 250,
+      "audio": "data/assets/audio-9860-d410ac0af5b3d976.mp3",
+      "hotspots": [
+        {
+          "id": 18385,
+          "yaw": 172.497,
+          "pitch": -40.3916,
+          "type": "marker",
+          "target": "9848",
+          "label": "Đền Ngọc Sơn",
+          "icon": "fas fa-angles-up",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 18420,
+          "yaw": -9.20744,
+          "pitch": -36.4472,
+          "type": "marker",
+          "target": "9861",
+          "label": "Hồ Gươm trên cao",
+          "icon": "fas fa-house",
+          "targetPitch": null,
+          "targetYaw": null
+        },
+        {
+          "id": 4258,
+          "yaw": 172.664,
+          "pitch": 4.98311,
+          "type": "image",
+          "url": "data/assets/info-4258-348b836d31d8650c.webp"
+        },
+        {
+          "id": 4267,
+          "yaw": -7.36451,
+          "pitch": -15.2643,
+          "type": "link",
+          "url": "https://ltq11-ta.github.io/cauthehuc/"
+        }
+      ],
+      "titleVi": "Cầu Thê Húc",
+      "titleEn": "The Huc Bridge",
+      "textVi": "Trước mắt chúng ta là cầu Thê Húc – cây cầu đỏ “cong cong như con tôm”. Hình ảnh cây cầu đã trở nên quen thuộc trong thơ ca, ca dao và ký ức của nhiều thế hệ. Từ trên cầu, có thể phóng tầm mắt ra mặt Hồ Gươm, thu trọn vẻ xanh biếc của mặt nước và Tháp Rùa cổ kính. Cây cầu không chỉ là lối dẫn vào đền, mà còn là một trong những hình ảnh biểu tượng của Hà Nội. Bước qua cầu, chúng ta sẽ đến không gian thờ tự của Đền Ngọc Sơn, nơi thờ Đức Thánh Trần Hưng Đạo và Văn Xương Đế Quân, đồng thời lưu giữ hai tiêu bản của “cụ Rùa”.",
+      "textEn": "Before us stretches The Huc Bridge—the iconic, scarlet wooden bridge gently arching like a crescent across the tranquil water. Meaning 'Perch of Morning Sunlight', this legendary bridge connects the lakeshore to Ngoc Son Temple, offering panoramic vistas across the emerald lake toward the historic Turtle Tower. Stepping across, visitors enter the sacred halls honoring Saint Tran Hung Dao and the God of Literature, while gazing upon the famous preserved specimens of the historic giant turtles.",
+      "audioVi": "data/assets/audio-9860-d410ac0af5b3d976.mp3",
+      "audioEn": "data/assets/audio-en-9860.mp3"
+    }
+  ],
+  "floorplan": {
+    "title": "Bản đồ các điểm lịch sử quanh Hồ Gươm",
+    "url": "data/assets/floorplan-704c712f224f85f9.webp",
+    "points": [
+      {
+        "id": "9847",
+        "label": "Hồ Gươm",
+        "x": 44.333333333333336,
+        "y": 64.3125
+      },
+      {
+        "id": "9848",
+        "label": "Đền Ngọc Sơn",
+        "x": 46.0,
+        "y": 20.125
+      },
+      {
+        "id": "9849",
+        "label": "Đền Bà Kiệu",
+        "x": 59.333333333333336,
+        "y": 14.0
+      },
+      {
+        "id": "9850",
+        "label": "Tượng đài cảm tử",
+        "x": 61.666666666666664,
+        "y": 19.25
+      },
+      {
+        "id": "9851",
+        "label": "Báo Nhân Dân",
+        "x": 27.666666666666668,
+        "y": 38.5
+      },
+      {
+        "id": "9853",
+        "label": "Đình Nam Hương",
+        "x": 27.333333333333332,
+        "y": 49.0
+      },
+      {
+        "id": "9855",
+        "label": "Đền vua Lê Thái Tổ",
+        "x": 32.333333333333336,
+        "y": 47.25
+      },
+      {
+        "id": "9856",
+        "label": "Bưu điện Hà Nội",
+        "x": 59.333333333333336,
+        "y": 86.625
+      },
+      {
+        "id": "9857",
+        "label": "Bắc Bộ Phủ",
+        "x": 81.66666666666667,
+        "y": 85.75
+      },
+      {
+        "id": "9858",
+        "label": "Vườn hoa Lý Thái Tổ",
+        "x": 70.33333333333333,
+        "y": 72.625
+      },
+      {
+        "id": "9859",
+        "label": "UBND TP Hà Nội",
+        "x": 67.33333333333333,
+        "y": 59.5
+      }
+    ]
+  }
+}

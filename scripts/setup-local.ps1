@@ -7,8 +7,8 @@ if (-not $projectRoot.StartsWith('D:\', [StringComparison]::OrdinalIgnoreCase)) 
 New-Item -ItemType Directory -Force -Path $localRoot | Out-Null
 $envPath = Join-Path $projectRoot 'backend\.env'
 if (-not (Test-Path -LiteralPath $envPath)) {
-    $dbPassword = [Convert]::ToHexString([Security.Cryptography.RandomNumberGenerator]::GetBytes(24)).ToLowerInvariant()
-    $adminPassword = [Convert]::ToHexString([Security.Cryptography.RandomNumberGenerator]::GetBytes(12)).ToLowerInvariant()
+    $rng = [System.Security.Cryptography.RandomNumberGenerator]::Create(); $b24 = New-Object byte[] 24; $rng.GetBytes($b24); $dbPassword = [System.BitConverter]::ToString($b24).Replace("-", "").ToLowerInvariant()
+    $b12 = New-Object byte[] 12; $rng.GetBytes($b12); $adminPassword = [System.BitConverter]::ToString($b12).Replace("-", "").ToLowerInvariant()
     @"
 DATABASE_URL=postgresql://hanoi_owner:${dbPassword}@127.0.0.1:${PgPort}/hanoi_guide
 PORT=8090
@@ -55,3 +55,4 @@ try {
 } finally { $env:PGPASSWORD = $previousPassword }
 Write-Host "PostgreSQL ready on 127.0.0.1:$PgPort. Data: $dataPath"
 Write-Host 'Local admin credentials: .local/admin-credentials.txt'
+

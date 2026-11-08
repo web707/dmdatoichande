@@ -5,19 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Hồ Gươm VR360</title>
   <link rel="stylesheet" href="vendor/pannellum.css">
-  <link rel="stylesheet" href="tour.css">
+  <link rel="stylesheet" href="tour.css?v=7">
   <script defer src="vendor/pannellum.js"></script>
-  <script defer src="tour.js"></script>
+  <script defer src="tour.js?v=7"></script>
 </head>
 <body>
   <main id="panorama" aria-label="Toàn cảnh 360 độ"></main>
-  <header><span>HỒ GƯƠM · VR360</span><strong id="scene-title"></strong></header>
-  <button id="map-button" type="button" hidden>Bản đồ</button>
+  
+  <header>
+    <span id="header-badge">HỒ GƯƠM · VR360</span>
+    <strong id="scene-title"></strong>
+  </header>
+
+  <div class="top-actions">
+    <!-- Language Toggle: Vietnamese / English -->
+    <div class="lang-switch" role="group" aria-label="Ngôn ngữ">
+      <button id="btn-lang-vi" type="button" class="lang-btn active">🇻🇳 VI</button>
+      <button id="btn-lang-en" type="button" class="lang-btn">🇬🇧 EN</button>
+    </div>
+
+    <button id="audio-button" type="button" hidden aria-label="Thuyết minh">🔊 Thuyết minh</button>
+    <button id="transcript-button" type="button" hidden aria-label="Lời thoại">📜 Lời thoại</button>
+    <button id="map-button" type="button" hidden aria-label="Mở bản đồ">🗺️ Bản đồ</button>
+  </div>
+
+  <!-- Collapsible Floating Transcript Card -->
+  <div id="transcript-card" class="transcript-card hidden" aria-live="polite">
+    <div class="transcript-header">
+      <div class="transcript-title">
+        <span class="transcript-icon">📖</span>
+        <span id="transcript-heading">Lời thuyết minh</span>
+      </div>
+      <button id="transcript-close" type="button" aria-label="Ẩn lời thoại">✕</button>
+    </div>
+    <div id="transcript-text" class="transcript-body"></div>
+  </div>
+
+  <audio id="narration" preload="auto"></audio>
   <button id="previous" class="step" type="button" aria-label="Cảnh trước" hidden>‹</button>
   <button id="next" class="step" type="button" aria-label="Cảnh sau" hidden>›</button>
+
   <p id="status" role="status">Đang tải tour…</p>
+
   <dialog id="details" aria-label="Thông tin địa điểm">
-    <form method="dialog"><button type="submit" aria-label="Đóng">✕</button></form>
+    <div class="dialog-header">
+      <div id="dialog-title" class="dialog-title">Thông tin tư liệu</div>
+      <div class="dialog-actions">
+        <a id="dialog-external" class="dialog-external-btn" target="_blank" rel="noopener noreferrer" title="Xem chi tiết" hidden>↗ Ấn để xem chi tiết</a>
+        <button id="close-dialog" type="button" aria-label="Đóng">✕</button>
+      </div>
+    </div>
     <div id="content"></div>
   </dialog>
 </body>

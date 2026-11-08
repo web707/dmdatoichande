@@ -7,8 +7,8 @@ import json
 from pathlib import Path
 import re
 from tempfile import NamedTemporaryFile
-from urllib.parse import urlparse
-from urllib.request import urlopen
+from urllib.parse import urlparse, quote, unquote
+from urllib.request import urlopen, Request
 
 from PIL import Image
 
@@ -29,10 +29,12 @@ def write_atomic(path, data):
 
 
 def archive(relative, *, refresh=False):
-    path = ARCHIVE / relative.split('?')[0]
+    safe_rel = unquote(relative.split('?')[0])
+    path = ARCHIVE / safe_rel
     if not refresh and path.exists():
         return path.read_bytes()
-    with urlopen(SOURCE + relative, timeout=40) as response:
+    req = Request(SOURCE + relative, headers={'User-Agent': 'Mozilla/5.0'})
+    with urlopen(req, timeout=60) as response:
         data = response.read()
     write_atomic(path, data)
     return data
@@ -88,6 +90,17 @@ def scene_data(room, room_ids, duration):
             raise ValueError(f'Invalid 360° image ratio for scene {scene_id}')
         panorama = webp(image, f'scene-{scene_id}', (3072, 1536), 80)
         preview = webp(image, f'preview-{scene_id}', (1024, 512), 70)
+
+    audio_url = None
+    song = room.get('song')
+    if song:
+        try:
+            audio_bytes = archive(f'content/{quote(song)}')
+            audio_url = publish(f'audio-{scene_id}', 'mp3', audio_bytes)
+            print(f'Imported audio narration for scene {scene_id} ({room["name"].strip()})')
+        except Exception as e:
+            print(f'Warning: Could not fetch audio for {scene_id}: {e}')
+
     fade = room['transition_time'] if room['transition_override'] else duration
     return {
         'id': scene_id,
@@ -99,6 +112,7 @@ def scene_data(room, room_ids, duration):
         'hfov': room['hfov'],
         'northOffset': room['northOffset'],
         'fadeMs': max(0, min(400, int(fade))),
+        'audio': audio_url,
         'hotspots': [marker_data(marker, room_ids) for marker in room['markers']],
     }
 
@@ -124,6 +138,7 @@ def floorplan_data(rooms):
 
 
 def main():
+    print('Starting import of Hoan Kiem VR360 from Báo Nhân Dân...')
     html = archive('index.html', refresh=True).decode('utf-8')
     source = json.loads(archive('ajax/rooms.json', refresh=True))
     rooms = source['rooms']
@@ -143,7 +158,7 @@ def main():
         ))
     manifest = {'firstScene': '9861', 'scenes': scenes, 'floorplan': floorplan_data(rooms)}
     write_atomic(PUBLIC / 'tour.json', json.dumps(manifest, ensure_ascii=False).encode('utf-8'))
-    print(f'Imported {len(scenes)} panoramas and {sum(len(s["hotspots"]) for s in scenes)} hotspots.')
+    print(f'Successfully imported {len(scenes)} panoramas and {sum(len(s["hotspots"]) for s in scenes)} hotspots.')
     print(f'Runtime data: {PUBLIC}')
 
 

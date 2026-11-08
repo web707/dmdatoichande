@@ -15,7 +15,7 @@ class HoanKiemViewer extends StatelessWidget {
         ..title = 'Hoan Kiem Lake VR360 by Báo Nhân Dân'
         ..setAttribute(
           'sandbox',
-          'allow-scripts allow-same-origin allow-popups',
+          'allow-scripts allow-same-origin allow-popups allow-forms',
         )
         ..allowFullscreen = true
         ..style.width = '100%'

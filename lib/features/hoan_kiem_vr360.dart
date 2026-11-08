@@ -65,10 +65,7 @@ class HoanKiemTourPage extends ConsumerWidget {
           key: const ValueKey('hoan-kiem-tour-viewer'),
           child: HoanKiemViewer(key: ValueKey(viewerUrl), url: viewerUrl),
         ),
-        Align(
-          alignment: Alignment.centerRight,
-          child: SourceLink(url.toString(), label: 'Open on Báo Nhân Dân'),
-        ),
+
       ],
     );
   }
