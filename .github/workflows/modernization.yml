@@ -85,7 +85,10 @@ jobs:
         with:
           java-version: 17
           distribution: temurin
-      - run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Accept licenses and install Android SDK platform 36
+        run: |
+          yes | sdkmanager --licenses || true
+          yes | sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
       - name: Check Kotlin contract copy
         run: >-
           git diff --no-index --ignore-cr-at-eol --
