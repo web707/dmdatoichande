@@ -15,11 +15,11 @@ jobs:
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
-          pattern='^(feat|fix|chore|docs|style|refactor|perf|test|build|ci|revert): .+'
+          pattern='^(feat|fix|chore|docs|style|refactor|perf|test|build|ci|revert)(\([a-zA-Z0-9._/-]+\))?: .+$'
           if [[ "$PR_TITLE" =~ $pattern ]]; then
             echo "OK: $PR_TITLE"
           else
-            echo "::error::PR title must look like 'type: description' (no scope)."
+            echo "::error::PR title must look like 'type: description' or 'type(scope): description'."
             echo "::error::Allowed types: feat, fix, chore, docs, style, refactor, perf, test, build, ci, revert"
             echo "::error::Got: $PR_TITLE"
             exit 1
