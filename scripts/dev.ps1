@@ -55,7 +55,7 @@ $backend = $web = $emulator = $null
 try {
     $node = (Get-Command node.exe -ErrorAction Stop).Source
     Get-Command npm.cmd -ErrorAction Stop | Out-Null
-    $sdk = if ($env:ANDROID_HOME) { $env:ANDROID_HOME } else { $env:ANDROID_SDK_ROOT }
+    $sdk = if ($env:ANDROID_HOME) { $env:ANDROID_HOME } elseif ($env:ANDROID_SDK_ROOT) { $env:ANDROID_SDK_ROOT } else { (Join-Path $env:LOCALAPPDATA "Android\Sdk") }
     if (-not $sdk) { throw 'Set ANDROID_HOME to the Android SDK directory.' }
     $adb = Join-Path $sdk 'platform-tools/adb.exe'
     $emulatorExe = Join-Path $sdk 'emulator/emulator.exe'
@@ -63,7 +63,13 @@ try {
         throw 'Install Android SDK Platform-Tools and Android Emulator.'
     }
     if ((& $emulatorExe -list-avds) -cnotcontains $avd) {
-        throw "Android AVD '$avd' was not found. Set HANOI_ANDROID_AVD to an installed AVD name."
+        $installedAvds = @(& $emulatorExe -list-avds)
+        if ($installedAvds.Count -gt 0) {
+            $avd = $installedAvds[0]
+            Write-Host "AVD default not found. Using installed AVD: '$avd'"
+        } else {
+            throw "Android AVD '$avd' was not found. Set HANOI_ANDROID_AVD to an installed AVD name."
+        }
     }
     if (-not (Test-Path -LiteralPath (Join-Path $root 'backend/.env'))) {
         throw 'Provision the local PostgreSQL catalog first using the repository README.'
@@ -120,7 +126,7 @@ try {
 
     Write-Host "Cold-booting '$avd' with snapshot loading and saving disabled..."
     $emulator = Start-Process -FilePath $emulatorExe -ArgumentList @('-avd', ('"' + $avd + '"'), '-port', '5554', '-no-snapshot') `
-        -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $logDir 'emulator.log') `
+        -WindowStyle Normal -PassThru -RedirectStandardOutput (Join-Path $logDir 'emulator.log') `
         -RedirectStandardError (Join-Path $logDir 'emulator-error.log')
     Wait-Until {
         if ($emulator.HasExited) { throw 'Emulator exited. Check .local/dev/emulator-error.log.' }
